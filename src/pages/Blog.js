@@ -20,6 +20,7 @@ const Blog = ({ location, data }) => {
           title={node.frontmatter.title}
           date={node.frontmatter.date}
           tags={["Description", "Tutorial"]}
+          slug={node.fields.slug}
         />
       ))}
     </Layout>
@@ -39,6 +40,9 @@ export const query = graphql`
         }
         excerpt
         html
+        fields {
+          slug
+        }
       }
     }
   }

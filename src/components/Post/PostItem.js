@@ -12,17 +12,18 @@ import {
 /**
  * Primary UI component for user interaction
  */
-const PostItem = ({ size, title, date, tags, ...props }) => {
+const PostItem = ({ size, title, date, tags, slug, ...props }) => {
   const tagsItems = tags.map(tag => (
     <TagFooter key={tag + Math.random()} to="/">
       {tag} •&nbsp;{" "}
     </TagFooter>
   ))
+  console.log(slug)
   return (
     <CardItem>
       <div>
         <Title>
-          <Link to="/">{title}</Link>
+          <Link href={`${slug}`}>{title}</Link>
         </Title>
       </div>
       <Footer>
