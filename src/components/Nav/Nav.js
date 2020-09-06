@@ -6,7 +6,7 @@ const Nav = ({ dark }) => (
   <>
     <Container>
       <List>
-        <Link to="/Blog/">
+        <Link to="/Blog/" state={{ dark }}>
           <Text dark={dark}>Blog</Text>
         </Link>
         <Link to="/">

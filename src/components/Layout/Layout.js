@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import { Container, Global } from "./LayoutStyled"
 import Header from "../Header/Header"
 import Nav from "../Nav/Nav"
+import Footer from "../Footer/Footer"
 
 const Layout = ({ children }) => {
   const [dark, setDark] = useState(getInitialMode())
@@ -33,6 +34,7 @@ const Layout = ({ children }) => {
         <Nav dark={dark} />
         <hr />
         {children}
+        <Footer />
       </Container>
     </Global>
   )

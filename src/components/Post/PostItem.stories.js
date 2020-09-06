@@ -10,11 +10,11 @@
 // }
 import React from "react"
 
-import { Post } from "./Post"
+import PostItem from "./PostItem"
 
 export default {
-  title: "UI/Post",
-  component: Post,
+  title: "UI/PostItem",
+  component: PostItem,
   argTypes: {
     title: "title",
   },

@@ -12,3 +12,7 @@ a {
 a:hover {
   color: inherit;
 }
+
+p {
+  font-family: "Montserrat", sans-serif;
+}
