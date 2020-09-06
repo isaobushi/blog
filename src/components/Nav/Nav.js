@@ -6,18 +6,18 @@ const Nav = ({ dark }) => (
   <>
     <Container>
       <List>
-        <Link>
+        <Link to="/Blog/">
           <Text dark={dark}>Blog</Text>
         </Link>
-        <Link>
+        <Link to="/">
           <Text dark={dark}>About</Text>
         </Link>
       </List>
       <List style={{ justifyContent: "flex-end" }}>
-        <Link>
+        <Link to="/">
           <Text dark={dark}>Twitter</Text>
         </Link>
-        <Link>
+        <Link to="/">
           <Text dark={dark}>GitHub</Text>
         </Link>
       </List>

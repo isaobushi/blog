@@ -15,7 +15,7 @@ const Container = styled.div`
 const Icon = styled.h1`
   color: inherit;
   transition: all 0.3s ease-in-out;
-  transform: rotate(180deg);
+  transform: rotate(140deg);
   cursor: pointer;
   &:hover {
     color: #ff8300;

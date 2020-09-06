@@ -6,7 +6,7 @@ const Global = styled.div`
   height: 100vh;
   background-color: ${props => (props.dark ? "#2d3748" : "snow")};
   color: ${props => (props.dark ? "snow" : "#2d3748")};
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
 `
 const Container = styled.div`
   width: 100%;
