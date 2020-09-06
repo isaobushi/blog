@@ -7,7 +7,7 @@ const Text = styled.div`
 `
 
 const Container = styled.div`
-  padding: 10px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
