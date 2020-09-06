@@ -1,9 +1,8 @@
 import styled from "styled-components"
 
-const Text = styled.div`
+const Title = styled.h1`
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 2rem;
 `
 
 const Container = styled.div`
@@ -13,9 +12,16 @@ const Container = styled.div`
   align-items: center;
 `
 
-const Icon = styled.div`
-  font-size: 2rem;
-  color: #788291;
+const Icon = styled.h1`
+  color: inherit;
+  transition: all 0.3s ease-in-out;
+  transform: rotate(180deg);
+  cursor: pointer;
+  &:hover {
+    color: #ff8300;
+    /* transform: rotate(180deg); */
+    /* transform-origin: 50% 50%; */
+  }
 `
 
-export { Container, Icon, Text }
+export { Container, Icon, Title }
