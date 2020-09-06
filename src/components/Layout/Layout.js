@@ -34,8 +34,8 @@ const Layout = ({ children }) => {
         <Nav dark={dark} />
         <hr />
         {children}
-        <Footer />
       </Container>
+      <Footer />
     </Global>
   )
 }

@@ -1,7 +1,8 @@
 import styled from "styled-components"
 
 const Global = styled.div`
-  display: fles;
+  display: flex;
+  height: 100vh;
   justify-content: center;
   background-color: ${props => (props.dark ? "#2d3748" : "snow")};
   color: ${props => (props.dark ? "snow" : "#2d3748")};

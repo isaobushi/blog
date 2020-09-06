@@ -4,9 +4,8 @@ import { FooterContainer, TextFooter } from "./FooterStyled"
 const Footer = () => (
   <>
     <FooterContainer>
-      <div style={{ width: "100%" }}>
-        <hr />
-      </div>
+      <hr />
+      <div style={{ width: "100%" }}></div>
       <TextFooter> &copy; by Isao. All rights reserved.</TextFooter>
     </FooterContainer>
   </>

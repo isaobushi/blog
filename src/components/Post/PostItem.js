@@ -13,16 +13,21 @@ import {
  * Primary UI component for user interaction
  */
 const PostItem = ({ size, title, date, tags, ...props }) => {
-  
-  const tagsItems = tags.map(tag => <TagFooter to="/">{tag} •&nbsp; </TagFooter>) 
+  const tagsItems = tags.map(tag => (
+    <TagFooter key={tag + Math.random()} to="/">
+      {tag} •&nbsp;{" "}
+    </TagFooter>
+  ))
   return (
     <CardItem>
       <div>
-          <Title><Link to="/" >{title}</Link></Title>
+        <Title>
+          <Link to="/">{title}</Link>
+        </Title>
       </div>
       <Footer>
         <TextFooter>
-          {date}  {" • "} {tagsItems}
+          {date} {" • "} {tagsItems}
         </TextFooter>
       </Footer>
     </CardItem>

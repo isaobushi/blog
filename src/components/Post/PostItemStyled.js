@@ -4,7 +4,7 @@ const CardItem = styled.div`
   padding-bottom: 2rem;
 `
 
-const Title = styled.a`
+const Title = styled.div`
   font-size: 2rem;
   font-family: "Roboto", sans-serif;
   cursor: pointer;
@@ -12,7 +12,7 @@ const Title = styled.a`
   margin: 0;
 `
 const Footer = styled.div``
-const TextFooter = styled.p`
+const TextFooter = styled.div`
   font-size: 1.5rem;
   padding: 2px 0;
   margin: 0;
