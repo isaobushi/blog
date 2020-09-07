@@ -2,7 +2,12 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout/Layout"
 import PostItem from "../components/Post/PostItem"
-import { BlogHeader, Item, ListTags, Title } from "./pagesStyled/BlogStyled"
+import {
+  BlogHeader,
+  Item,
+  ListTags,
+  Title,
+} from "../components/pagesStyled/BlogStyled"
 
 const Blog = ({ location, data }) => {
   return (
