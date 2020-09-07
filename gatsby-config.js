@@ -34,6 +34,9 @@ module.exports = {
         theme_color: `rgb(45, 55, 72)`,
         display: `standalone`,
         icon: `src/assets/img/arena.png`,
+        icon_options: {
+          purpose: `maskable`,
+        },
       },
     },
   ],
