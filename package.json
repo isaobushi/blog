@@ -19,6 +19,8 @@
     "@material-ui/core": "^4.11.0",
     "babel-plugin-styled-components": "^1.11.1",
     "gatsby": "^2.24.50",
+    "gatsby-plugin-manifest": "^2.4.27",
+    "gatsby-plugin-offline": "^3.2.26",
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-styled-components": "^3.3.10",
     "gatsby-source-filesystem": "^2.3.27",

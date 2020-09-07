@@ -16,6 +16,7 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -23,15 +24,16 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Andrea Mele`,
+        short_name: `AM`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `rgb(45, 55, 72)`,
+        display: `standalone`,
+      },
+    },
   ],
-}
-
-{
-  /* <Helmet>
-      <title>Isao's Blog</title>
-      <meta name="description" content="Isao personal blog" />
-      <meta name="keywords" content="blog, gatsby, react, pwa" />
-      <meta name="robots" content="index, follow" />
-      <html lang="en" />
-    </Helmet> */
 }
