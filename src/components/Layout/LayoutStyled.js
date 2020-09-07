@@ -9,6 +9,7 @@ const Global = styled.div`
   background-color: ${props => (props.dark ? "#2d3748" : "snow")};
   color: ${props => (props.dark ? "snow" : "#2d3748")};
   transition: all 0.2s ease-in-out;
+  padding: 0 2rem;
 `
 const Container = styled.div`
   min-height: calc(100vh - 199px);
