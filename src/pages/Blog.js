@@ -11,7 +11,7 @@ const Blog = ({ location, data }) => {
         <Item>
           <Title>Blog</Title>
         </Item>
-        <ListTags dark={location.state.dark}>List Tags</ListTags>
+        <ListTags isDark={location.state.dark}>List Tags</ListTags>
       </BlogHeader>
       {data.allMarkdownRemark.nodes.map(node => (
         <PostItem

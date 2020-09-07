@@ -4,6 +4,7 @@ import Header from "../Header/Header"
 import Nav from "../Nav/Nav"
 import Footer from "../Footer/Footer"
 import { getInitialMode } from "../../helpers/darkMode"
+import SEO from "../SEO/SEO"
 
 const Layout = ({ children }) => {
   const [dark, setDark] = useState(getInitialMode())
@@ -14,6 +15,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <SEO />
       <Global dark={dark}>
         <Container>
           <Header title="Isao Bushi" cb={setDark} value={dark}></Header>

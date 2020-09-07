@@ -8,22 +8,20 @@ import {
   Title,
   TagFooter,
 } from "./PostItemStyled"
-
 /**
  * Primary UI component for user interaction
  */
-const PostItem = ({ size, title, date, tags, slug, ...props }) => {
+const PostItem = ({ size, title, date, tags, slug, isDark, ...props }) => {
   const tagsItems = tags.map(tag => (
     <TagFooter key={tag + Math.random()} to="/">
       {tag} •&nbsp;{" "}
     </TagFooter>
   ))
-  console.log(slug)
   return (
     <CardItem>
       <div>
-        <Title>
-          <Link href={`${slug}`}>{title}</Link>
+        <Title isDark={isDark}>
+          <Link to={`${slug}`}>{title}</Link>
         </Title>
       </div>
       <Footer>
