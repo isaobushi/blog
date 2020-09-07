@@ -5,8 +5,7 @@ const FooterContainer = styled.div`
   max-width: 1024px;
   margin-top: 8rem;
   opacity: 0.7;
-  position: absolute;
-  bottom: 0;
+  height: 61px;
 `
 
 const TextFooter = styled.p`

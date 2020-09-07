@@ -4,22 +4,22 @@ import { Container, Global } from "./LayoutStyled"
 import Header from "../Header/Header"
 import Nav from "../Nav/Nav"
 import Footer from "../Footer/Footer"
+import { getInitialMode } from "../../helpers/darkMode"
+import Post from "../Post/Post"
 
 const BlogPostLayout = ({ data }) => {
-  const post = data.markdownRemark;
+  const post = data.markdownRemark
+  const [dark, setDark] = useState(getInitialMode())
+
   return (
-    // <Global dark={dark}>
-    //   <Container>
-    //     <Header title="Isao Bushi" cb={setDark} value={dark}></Header>
-    //     <Nav dark={dark} />
-    //     <hr />
-    //   </Container>
-    //   <Footer />
-    // </Global>
-    <>
-      <h1>{post.frontmatter.title}</h1>
-      <div dangerouslySetInnerHTML={{__html: post.html}}></div>
-    </>
+    <Global dark={dark}>
+      <Container>
+        <Header title="Isao Bushi" cb={setDark} value={dark}></Header>
+        <Nav dark={dark} />
+        <Post data={post} />
+        <Footer />
+      </Container>
+    </Global>
   )
 }
 
