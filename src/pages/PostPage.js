@@ -3,9 +3,9 @@ import { graphql } from "gatsby"
 import Post from "../components/Post/Post"
 import Layout from "../components/Layout/Layout"
 
-const PostPage = ({ data }) => {
-  console.log(data)
-  const post = data.markdownRemark
+const PostPage = props => {
+  console.log(props)
+  const post = props.data.markdownRemark
   return (
     <Layout>
       <Post data={post} />
@@ -16,7 +16,7 @@ const PostPage = ({ data }) => {
 export default PostPage
 
 export const query = graphql`
-  query($slug: String!) {
+  query($slug: String) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
