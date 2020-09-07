@@ -20,9 +20,8 @@ const ListTags = styled.a`
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   &:hover {
-    color: ${props => (props.dark ? "#d56c2d" : "#6b46c1")};
-    border-bottom: ${props =>
-      props.dark ? "1px solid #d56c2d" : "1px solid #6b46c1"};
+    color: #d56c2d;
+    border-bottom: 1px solid #d56c2d;
     transform: scale(1.1);
   }
 `
