@@ -1,6 +1,6 @@
 ---
-title: "HI. THIS IS A LONGER POST TITLE"
-date: "07.09.2021"
+title: "MY FIRST POST"
+date: "07.09.2020"
 tags: "Gatsby, First"
 ---
 

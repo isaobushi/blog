@@ -5,7 +5,6 @@ const CardItem = styled.div`
 `
 
 const Title = styled.div`
-  width: min-content;
   font-size: 2rem;
   font-family: "Roboto", sans-serif;
   cursor: pointer;
@@ -18,7 +17,7 @@ const Title = styled.div`
 
 const Footer = styled.div``
 const TextFooter = styled.div`
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding: 2px 0;
   margin: 0;
   transition: all 0.2s ease-in-out;
@@ -27,7 +26,7 @@ const TextFooter = styled.div`
 const TagFooter = styled.div`
   display: inline-block;
   font-family: "Montserrat", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
   &:hover {

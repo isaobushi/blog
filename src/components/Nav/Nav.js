@@ -14,12 +14,12 @@ const Nav = ({ dark }) => (
         </Link>
       </List>
       <List style={{ justifyContent: "flex-end" }}>
-        <Link to="/">
+        <a href="https://twitter.com/MrMele" target="blank">
           <Text dark={dark}>Twitter</Text>
-        </Link>
-        <Link to="/">
+        </a>
+        <a href="https://github.com/isaobushi" target="blank">
           <Text dark={dark}>GitHub</Text>
-        </Link>
+        </a>
       </List>
     </Container>
   </>

@@ -13,7 +13,7 @@ const Text = styled.div`
   transition: all 0.2s ease-in-out;
   cursor: pointer;
   &:hover {
-    color: ${props => (props.dark ? "#d56c2d" : "#6b46c1")};
+    color: #ff8300;
     transform: scale(1.1);
   }
 `
