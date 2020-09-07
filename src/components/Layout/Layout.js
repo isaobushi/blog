@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
   const [dark, setDark] = useState(getInitialMode())
 
   useEffect(() => {
-    localStorage.setItem("dark", dark)
+    typeof window !== "undefined" && window.localStorage.setItem("dark", dark)
   }, [dark])
 
   return (

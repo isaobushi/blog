@@ -22,7 +22,6 @@ exports.createPages = ({ graphql, actions }) => {
     }
   `).then(result => {
     result.data.allMarkdownRemark.nodes.forEach(node => {
-      console.log("node", node)
       createPage({
         path: node.fields.slug,
         component: path.resolve("./src/pages/PostPage.js"),

@@ -3,9 +3,8 @@ import { graphql } from "gatsby"
 import Post from "../components/Post/Post"
 import Layout from "../components/Layout/Layout"
 
-const PostPage = props => {
-  console.log(props)
-  const post = props.data.markdownRemark
+const PostPage = ({ data }) => {
+  const post = data.markdownRemark
   return (
     <Layout>
       <Post data={post} />
