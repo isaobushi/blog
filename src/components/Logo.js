@@ -20,28 +20,28 @@ const SVGLogo = () => {
     const tl = gsap.timeline({
       delay: 1,
       yoyo: true,
-      repeatDelay: 1,
+      repeatDelay: .8,
       repeat: 1,
     })
     MorphSVGPlugin.convertToPath(usbCircle)
     {/* prettier-ignore */ }
     /* eslint-disable */
-    tl.to(letterA, 1, { morphSVG: bracketStart, fill: "#F58F29" })
-      .to(letterD, 1, { morphSVG: switchCircle, fill: "#6279B8" }, "<")
+    tl.to(letterA, .5, { morphSVG: bracketStart, fill: "#F58F29" })
+      .to(letterD, .5, { morphSVG: switchCircle, fill: "#6279B8" }, "<")
       .fromTo(
-        switchLine, 1,
+        switchLine, .5,
         { yPercent: -500, opacity: 0, fill: "#4c9f70" },
         { yPercent: 0, opacity: 1, fill: "#4C9F70" },
         "<"
       )
       .to(letterD,{ rotate: -90, transformOrigin: "50% 50%", yPercent: -10 },"+=0.1")
       .to(switchLine,{rotate: -90,yPercent: 60,xPercent: -290,transformOrigin: "50% 50%",},"<")
-      .to(letterE,1,{ rotate: 90, transformOrigin: "50% 50%", xPercent: 15 },"<")
-      .to(letterE, 1, { morphSVG: usb, fill: "#E63946" }, "<")
-      .to(letterAEnd,1,{ morphSVG: bracketEnd, fill: "#E63946", xPercent: 60 },"<")
+      .to(letterE,.5,{ rotate: 90, transformOrigin: "50% 50%", xPercent: 15 },"<")
+      .to(letterE, .5, { morphSVG: usb, fill: "#E63946" }, "<")
+      .to(letterAEnd,.5,{ morphSVG: bracketEnd, fill: "#E63946", xPercent: 60 },"<")
       .fromTo(
         lineCode,
-        1,
+        .5,
         { opacity: 0, yPercent: -300, xPercent: 100 },
         { opacity: 1, yPercent: -5, xPercent: 100 }
       )
