@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react"
 import { gsap } from "gsap"
 import { MorphSVGPlugin } from "gsap/MorphSVGPlugin.js"
 
-const SVGLogo = () => {
+const SVGLogo = ({path}) => {
   let bracketStart = useRef(null)
   let letterA = useRef(null)
   let usb = useRef(null)
@@ -16,6 +16,7 @@ const SVGLogo = () => {
   let bracketEnd = useRef(null)
 
   useEffect(() => {
+    if(path === "/"){
     if (typeof window !== "undefined") gsap.registerPlugin(MorphSVGPlugin)
     const tl = gsap.timeline({
       delay: 1,
@@ -44,7 +45,7 @@ const SVGLogo = () => {
         .5,
         { opacity: 0, yPercent: -300, xPercent: 100 },
         { opacity: 1, yPercent: -5, xPercent: 100 }
-      )
+      )}
   }, [])
 
   return (

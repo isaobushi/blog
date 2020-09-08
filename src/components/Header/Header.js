@@ -5,21 +5,20 @@ import { BsBrightnessHigh } from "react-icons/bs"
 import { MdBrightness2 } from "react-icons/md"
 import { SVGLogo } from "../Logo"
 
-export default ({ cb, value }) => {
+export default ({ cb, value, path}) => {
   const icon = value ? <BsBrightnessHigh /> : <MdBrightness2 />
-  console.log(SVGLogo)
   return (
     <Container>
       <Link to="/">
-        <SVGLogo />
+        <SVGLogo path={path} />
       </Link>
       <Icon
         onClick={() => {
-          cb(!value)
+          cb(!value);
         }}
       >
         {icon}
       </Icon>
     </Container>
-  )
+  );
 }

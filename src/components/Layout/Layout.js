@@ -6,9 +6,8 @@ import Footer from "../Footer/Footer";
 import { getInitialMode } from "../../helpers/darkMode";
 import SEO from "../SEO/SEO";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, path }) => {
   const [dark, setDark] = useState(getInitialMode());
-
   useEffect(() => {
     typeof window !== "undefined" && window.localStorage.setItem("dark", dark);
   }, [dark]);
@@ -18,7 +17,7 @@ const Layout = ({ children }) => {
       <SEO />
       <Global dark={dark}>
         <Container>
-          <Header cb={setDark} value={dark}></Header>
+          <Header cb={setDark} value={dark} path={path}></Header>
           <Nav dark={dark} />
           <hr />
           {children}

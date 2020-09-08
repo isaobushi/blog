@@ -10,8 +10,9 @@ import {
 } from "../components/Blog/BlogStyled"
 
 const Blog = ({ location, data }) => {
+  const path = location.pathname ? location.pathname : "";
   return (
-    <Layout>
+    <Layout url={path}>
       <BlogHeader>
         <Item>
           <Title>Blog</Title>
@@ -29,7 +30,7 @@ const Blog = ({ location, data }) => {
         />
       ))}
     </Layout>
-  )
+  );
 }
 
 export default Blog
