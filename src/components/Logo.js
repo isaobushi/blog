@@ -7,7 +7,6 @@ const SVGLogo = () => {
   let letterA = useRef(null)
   let usb = useRef(null)
   let usbCircle = useRef(null)
-  let usbRect = useRef(null)
   let switchCircle = useRef(null)
   let switchLine = useRef(null)
   let letterD = useRef(null)
@@ -25,7 +24,8 @@ const SVGLogo = () => {
       repeat: 1,
     })
     MorphSVGPlugin.convertToPath(usbCircle)
-      {/* prettier-ignore */}
+    {/* prettier-ignore */ }
+    /* eslint-disable */
     tl.to(letterA, 1, { morphSVG: bracketStart, fill: "#F58F29" })
       .to(letterD, 1, { morphSVG: switchCircle, fill: "#6279B8" }, "<")
       .fromTo(
@@ -165,9 +165,6 @@ const SVGLogo = () => {
           fill="#fff"
         />
         <rect
-          ref={el => {
-            usbRect = el
-          }}
           id="usb-rect"
           x="61.91"
           y="2.29"
