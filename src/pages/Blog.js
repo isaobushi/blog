@@ -7,7 +7,7 @@ import {
   Item,
   ListTags,
   Title,
-} from "../components/pagesStyled/BlogStyled"
+} from "../components/Blog/BlogStyled"
 
 const Blog = ({ location, data }) => {
   return (

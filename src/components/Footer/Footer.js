@@ -6,7 +6,7 @@ const Footer = () => (
     <FooterContainer>
       <hr />
       <div style={{ width: "100%" }}></div>
-      <TextFooter> &copy; by Isao. All rights reserved.</TextFooter>
+      <TextFooter> &copy; 2020 by Isao. All rights reserved.</TextFooter>
     </FooterContainer>
   </>
 )

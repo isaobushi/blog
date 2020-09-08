@@ -19,3 +19,38 @@ a:hover {
 p {
   font-family: "Montserrat", sans-serif;
 }
+#layer_1 {
+  transform: scale(2);
+}
+
+#bracket-s {
+  opacity: 0;
+}
+
+#switch-1 {
+  opacity: 0;
+}
+
+#switch-2 {
+  opacity: 0;
+}
+
+#usb {
+  opacity: 0;
+}
+
+#usb-circle {
+  opacity: 0;
+}
+
+#usb-rect {
+  opacity: 0;
+}
+
+#line-code {
+  opacity: 0;
+}
+
+#bracket-e {
+  opacity: 0;
+}

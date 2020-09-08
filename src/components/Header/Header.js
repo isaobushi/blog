@@ -1,15 +1,17 @@
 import React from "react"
 import { Link } from "gatsby"
-import { Container, Title, Icon } from "./HeaderStyled"
+import { Container, Icon } from "./HeaderStyled"
 import { BsBrightnessHigh } from "react-icons/bs"
 import { MdBrightness2 } from "react-icons/md"
+import { SVGLogo } from "../Logo"
 
-export default ({ title, cb, value }) => {
+export default ({ cb, value }) => {
   const icon = value ? <BsBrightnessHigh /> : <MdBrightness2 />
+  console.log(SVGLogo)
   return (
     <Container>
       <Link to="/">
-        <Title>{title}</Title>
+        <SVGLogo />
       </Link>
       <Icon
         onClick={() => {

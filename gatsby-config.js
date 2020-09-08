@@ -6,7 +6,7 @@
 
 module.exports = {
   siteMetadata: {
-    title: "Isao's Blog",
+    title: "AM",
     description: "This is my tech blog",
     keywords: "blog, gatsby, react, pwa",
     url: "https://www.isao.io",
@@ -17,6 +17,23 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-offline`,
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /\.inline\.svg$/,
+          options: {
+            tag: "symbol",
+            name: "MyIcon",
+            props: {
+              className: "my-class",
+              title: "example",
+            },
+            filters: [value => console.log(value)],
+          },
+        },
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
