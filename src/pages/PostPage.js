@@ -5,11 +5,12 @@ import Layout from "../components/Layout/Layout"
 
 const PostPage = ({ data }) => {
   const post = data.markdownRemark
+  const featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid;
   return (
     <Layout>
-      <Post data={post} />
+      <Post data={post} img={featuredImgFluid} />
     </Layout>
-  )
+  );
 }
 
 export default PostPage
@@ -20,7 +21,14 @@ export const query = graphql`
       html
       frontmatter {
         title
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }
-`
+`;

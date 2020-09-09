@@ -14,9 +14,37 @@ module.exports = {
   /* Your site config here */
   plugins: [
     `gatsby-plugin-styled-components`,
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              wrapperStyle: "border-radius: 5px; max-width: 100%;",
+            },
+          },
+          {
+            resolve: `gatsby-remark-vscode`,
+            options: {
+              theme: "Default Dark+",
+              inlineCode: {
+                marker: "•",
+                theme: {
+                  default: "Default Light+",
+                  dark: "Default Dark+",
+                },
+              },
+            },
+          },
+        ],
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-offline`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-remark-images`,
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
@@ -42,6 +70,12 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/assets/post-images`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Andrea Mele`,
@@ -57,4 +91,4 @@ module.exports = {
       },
     },
   ],
-}
+};
