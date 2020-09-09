@@ -1,9 +1,9 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { MorphSVGPlugin } from "gsap/MorphSVGPlugin.js";
 
 const DarkModeSVG = ({ dark }) => {
-  const [isDark, setIsDark] = useState(dark);
+  // const [,isDark] = useState(dark);
   let mainCircle = useRef()
   let raySmallOne = useRef()
   let raySmallTwo = useRef()
