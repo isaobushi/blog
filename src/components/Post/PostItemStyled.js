@@ -6,14 +6,14 @@ const CardItem = styled.div`
 
 const Title = styled.div`
   font-size: 2rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "ヒラギノ丸ゴ Pro W4", sans-serif;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   margin: 0;
   &:hover {
     text-shadow: 1px 1px 5px orangered;
   }
-`
+`;
 
 const Footer = styled.div``
 const TextFooter = styled.div`
