@@ -55,7 +55,7 @@ const SVGLogo = ({path}) => {
       xmlns="http://www.w3.org/2000/svg"
       width="195.5"
       height="69.11"
-      viewBox="15 0 75.5 14.11"
+      viewBox="16.5 0 75.5 14.11"
     >
       <text x="-260.32" y="-214.97" />{" "}
       <g>
