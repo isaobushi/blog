@@ -1,6 +1,6 @@
 import React from "react"
 import { PostArticle, PostContainer, PostTitle } from './PostStyled'
-import Img from "gatsby-image";
+// import Img from "gatsby-image";
 
 const Post = ({ data, img }) => {
   

@@ -10,14 +10,13 @@ import SEO from "../SEO/SEO";
 const Layout = ({ children, path }) => {
   const [dark, setDark] = useState(getInitialMode());
   let rule = useRef(null)
-  let nav = useRef(null)
   useEffect(() => {
     typeof window !== "undefined" && window.localStorage.setItem("dark", dark);
     if (path === "/") {
       const tl = gsap.timeline();
       tl.fromTo(rule, 1.5, { width: "0%", opacity:0 }, { width: "100%", opacity: 1 })
     }
-  }, [dark]);
+  }, [dark, path]);
 
   return (
     <>
