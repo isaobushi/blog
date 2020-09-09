@@ -8,7 +8,7 @@ export default ({ cb, value, path}) => {
   return (
     <Container>
       <Link to="/">
-        <SVGLogo path={path} />
+        <SVGLogo path={path} dark={value} />
       </Link>
       <Icon
         onClick={() => {
