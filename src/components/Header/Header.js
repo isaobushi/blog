@@ -1,12 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
 import { Container, Icon } from "./HeaderStyled"
-import { BsBrightnessHigh } from "react-icons/bs"
-import { MdBrightness2 } from "react-icons/md"
 import { SVGLogo } from "../Logo"
+import {DarkModeSVG} from "../SVG/DarkModeSVG"
 
 export default ({ cb, value, path}) => {
-  const icon = value ? <BsBrightnessHigh /> : <MdBrightness2 />
   return (
     <Container>
       <Link to="/">
@@ -17,7 +15,7 @@ export default ({ cb, value, path}) => {
           cb(!value);
         }}
       >
-        {icon}
+        <DarkModeSVG dark={value} />
       </Icon>
     </Container>
   );

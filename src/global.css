@@ -54,3 +54,27 @@ p {
 #bracket-e {
   opacity: 0;
 }
+
+
+#Layer_darkm_mode{
+  cursor: pointer;
+}
+ #moon-main{
+  opacity: 0;
+}
+#ray-big-n, #ray-big-ne, #ray-big-e, #ray-big-se, #ray-big-s,#ray-big-w, #ray-big-nw, #ray-big-sw {
+  opacity: 1;
+}
+
+#ray-small-1, #ray-small-2, #ray-small-3,#ray-small-4, #ray-small-5,#ray-small-6, #ray-small-7, #ray-small-8 {
+  opacity: 1;
+}
+
+#moon-inner-1, #moon-inner-2, #moon-inner-3, #moon-inner-4 {
+  opacity: 0;
+  fill: rgb(221, 141, 141);
+}
+
+#cloud-front, #cloud-back {
+  opacity: 0;
+}
