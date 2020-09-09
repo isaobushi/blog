@@ -28,6 +28,7 @@ const DarkModeSVG = ({ dark }) => {
   let cloudFront = useRef()
   let cloudBack = useRef()
 
+  // TODO find a way to clean all the variables into arrays
   // let smallRays = [
   // raySmallOne,
   // raySmallTwo,
@@ -65,7 +66,6 @@ const DarkModeSVG = ({ dark }) => {
   };
   
   useEffect(() => {
-    console.log("inside")
     if (typeof window !== "undefined") gsap.registerPlugin(MorphSVGPlugin);
     if (!dark) {
       tl.to(mainCircle, { fill: "#f7cf52" })
@@ -112,9 +112,9 @@ const DarkModeSVG = ({ dark }) => {
       id="Layer_darkm_mode"
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
-      width="300"
+      width="100"
       height="50"
-      viewBox="0 0 50 25"
+      viewBox="0 0 25 25"
       onClick={e => handleToogleDarkMode(e)}
     >
       <g>
