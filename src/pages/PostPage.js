@@ -5,7 +5,8 @@ import Layout from "../components/Layout/Layout"
 
 const PostPage = ({ data }) => {
   const post = data.markdownRemark
-  const featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid;
+  console.log(post)
+  const featuredImgFluid = post.frontmatter.featuredImage !== null && post.frontmatter.featuredImage.childImageSharp.fluid
   return (
     <Layout>
       <Post data={post} img={featuredImgFluid} />
