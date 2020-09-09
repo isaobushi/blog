@@ -11,6 +11,9 @@ const Item = styled.div``
 const Title = styled.h1`
   font-family: "ヒラギノ丸ゴ Pro W4", sans-serif;
   font-size: 3rem;
+  margin: 0;
+  color: orange;
+  text-shadow: 1px 1px 2px orangered;
 `;
 
 const ListTags = styled.a`
