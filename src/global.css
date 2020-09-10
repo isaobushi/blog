@@ -78,3 +78,7 @@ p {
 #cloud-front, #cloud-back {
   opacity: 0;
 }
+
+#Hex{
+  transform: scale(.4)
+}
