@@ -33,7 +33,10 @@ const HexSVG = ({ path, dark }) => {
   let Hex13 = useRef(null)
   let Hex14 = useRef(null)
   let Hex15 = useRef(null)
-
+  const handleHoverHexEnter = (id) => gsap.to(`#shadow-${id}`,0.5,{stagger: 0.2,attr: { dx: 10, dy: 0, stdDeviation: 5},},"<")
+  const handleHoverHexExit = (id) =>gsap.to(`#shadow-${id}`,0.5,{stagger: 0.2, attr: { dx: 0, dy: 0, stdDeviation: 0},},"<")
+ 
+          
   useEffect(() => {
     if (typeof window !== "undefined") gsap.registerPlugin(DrawSVGPlugin);
     gsap.fromTo(
@@ -301,12 +304,8 @@ const HexSVG = ({ path, dark }) => {
         fill="#fff"
         stroke="#d0d0d0"
         strokeMiterlimit="10"
-        onMouseEnter={() =>
-          gsap.to(shadow1,0.5,{stagger: 0.2,attr: { dx: 10, dy: 0, stdDeviation: 5},},"<")
-        }
-        onMouseLeave={() =>
-          gsap.to(shadow1,0.5,{stagger: 0.2, attr: { dx: 0, dy: 0, stdDeviation: 0},},"<")
-        }
+        onMouseEnter={() => handleHoverHexEnter(1)}
+        onMouseLeave={() => handleHoverHexExit(1)}
       />
       <path
         filter="url(#shadow2)"
@@ -320,12 +319,8 @@ const HexSVG = ({ path, dark }) => {
         fill="#fff"
         stroke="#d0d0d0"
         strokeMiterlimit="10"
-        onMouseEnter={() =>
-          gsap.to(shadow2,0.5,{stagger: 0.2,attr: { dx: 10, dy: 0, stdDeviation: 5},},"<")
-        }
-        onMouseLeave={() =>
-          gsap.to(shadow2,0.5,{stagger: 0.2, attr: { dx: 0, dy: 0, stdDeviation: 0},},"<")
-        }
+        onMouseEnter={() => handleHoverHexEnter(2)}
+        onMouseLeave={() => handleHoverHexExit(2)}
       />
       <path
         filter="url(#shadow3)"
@@ -339,12 +334,8 @@ const HexSVG = ({ path, dark }) => {
         fill="#fff"
         stroke="#d0d0d0"
         strokeMiterlimit="10"
-        onMouseEnter={() =>
-          gsap.to(shadow3,0.5,{stagger: 0.2,attr: { dx: 10, dy: 0, stdDeviation: 5},},"<")
-        }
-        onMouseLeave={() =>
-          gsap.to(shadow3,0.5,{stagger: 0.2, attr: { dx: 0, dy: 0, stdDeviation: 0},},"<")
-        }
+        onMouseEnter={() => handleHoverHexEnter(3)}
+        onMouseLeave={() => handleHoverHexExit(3)}
       />
       <path
         filter="url(#shadow4)"
@@ -358,12 +349,8 @@ const HexSVG = ({ path, dark }) => {
         fill="#fff"
         stroke="#d0d0d0"
         strokeMiterlimit="10"
-        onMouseEnter={() =>
-          gsap.to(shadow4,0.5,{stagger: 0.2,attr: { dx: 10, dy: 0, stdDeviation: 5},},"<")
-        }
-        onMouseLeave={() =>
-          gsap.to(shadow4,0.5,{stagger: 0.2, attr: { dx: 0, dy: 0, stdDeviation: 0},},"<")
-        }
+        onMouseEnter={() => handleHoverHexEnter(4)}
+        onMouseLeave={() => handleHoverHexExit(4)}
       />
       <path
         filter="url(#shadow5)"
@@ -377,12 +364,8 @@ const HexSVG = ({ path, dark }) => {
         fill="#fff"
         stroke="#d0d0d0"
         strokeMiterlimit="10"
-        onMouseEnter={() =>
-          gsap.to(shadow5,0.5,{stagger: 0.2,attr: { dx: 10, dy: 0, stdDeviation: 5},},"<")
-        }
-        onMouseLeave={() =>
-          gsap.to(shadow5,0.5,{stagger: 0.2, attr: { dx: 0, dy: 0, stdDeviation: 0},},"<")
-        }
+        onMouseEnter={() => handleHoverHexEnter(5)}
+        onMouseLeave={() => handleHoverHexExit(5)}
       />
       <path
         filter="url(#shadow6)"
@@ -396,12 +379,8 @@ const HexSVG = ({ path, dark }) => {
         fill="#fff"
         stroke="#d0d0d0"
         strokeMiterlimit="10"
-        onMouseEnter={() =>
-          gsap.to(shadow6,0.5,{stagger: 0.2,attr: { dx: 10, dy: 0, stdDeviation: 5},},"<")
-        }
-        onMouseLeave={() =>
-          gsap.to(shadow6,0.5,{stagger: 0.2, attr: { dx: 0, dy: 0, stdDeviation: 0},},"<")
-        }
+        onMouseEnter={() => handleHoverHexEnter(6)}
+        onMouseLeave={() => handleHoverHexExit(6)}
       />
       <path
         filter="url(#shadow7)"
@@ -415,12 +394,8 @@ const HexSVG = ({ path, dark }) => {
         fill="#fff"
         stroke="#d0d0d0"
         strokeMiterlimit="10"
-        onMouseEnter={() =>
-          gsap.to(shadow7,0.5,{stagger: 0.2,attr: { dx: 10, dy: 0, stdDeviation: 5},},"<")
-        }
-        onMouseLeave={() =>
-          gsap.to(shadow7,0.5,{stagger: 0.2, attr: { dx: 0, dy: 0, stdDeviation: 0},},"<")
-        }
+        onMouseEnter={() => handleHoverHexEnter(7)}
+        onMouseLeave={() => handleHoverHexExit(7)}
       />
       <path
         filter="url(#shadow8)"
@@ -434,12 +409,8 @@ const HexSVG = ({ path, dark }) => {
         fill="#fff"
         stroke="#d0d0d0"
         strokeMiterlimit="10"
-        onMouseEnter={() =>
-          gsap.to(shadow8,0.5,{stagger: 0.2,attr: { dx: 10, dy: 0, stdDeviation: 5},},"<")
-        }
-        onMouseLeave={() =>
-          gsap.to(shadow8,0.5,{stagger: 0.2, attr: { dx: 0, dy: 0, stdDeviation: 0},},"<")
-        }
+        onMouseEnter={() => handleHoverHexEnter(8)}
+        onMouseLeave={() => handleHoverHexExit(8)}
       />
       <path
         filter="url(#shadow9)"
@@ -453,12 +424,8 @@ const HexSVG = ({ path, dark }) => {
         fill="#fff"
         stroke="#d0d0d0"
         strokeMiterlimit="10"
-        onMouseEnter={() =>
-          gsap.to(shadow9,0.5,{stagger: 0.2,attr: { dx: 10, dy: 0, stdDeviation: 5},},"<")
-        }
-        onMouseLeave={() =>
-          gsap.to(shadow9,0.5,{stagger: 0.2, attr: { dx: 0, dy: 0, stdDeviation: 0},},"<")
-        }
+        onMouseEnter={() => handleHoverHexEnter(9)}
+        onMouseLeave={() => handleHoverHexExit(9)}
       />
       <path
         filter="url(#shadow10)"
@@ -472,12 +439,8 @@ const HexSVG = ({ path, dark }) => {
         fill="#fff"
         stroke="#d0d0d0"
         strokeMiterlimit="10"
-        onMouseEnter={() =>
-          gsap.to(shadow10,0.5,{stagger: 0.2,attr: { dx: 10, dy: 0, stdDeviation: 5},},"<")
-        }
-        onMouseLeave={() =>
-          gsap.to(shadow10,0.5,{stagger: 0.2, attr: { dx: 0, dy: 0, stdDeviation: 0},},"<")
-        }
+        onMouseEnter={() => handleHoverHexEnter(10)}
+        onMouseLeave={() => handleHoverHexExit(10)}
       />
       <path
         filter="url(#shadow11)"
@@ -491,12 +454,8 @@ const HexSVG = ({ path, dark }) => {
         fill="#fff"
         stroke="#d0d0d0"
         strokeMiterlimit="10"
-        onMouseEnter={() =>
-          gsap.to(shadow11,0.5,{stagger: 0.2,attr: { dx: 10, dy: 0, stdDeviation: 5},},"<")
-        }
-        onMouseLeave={() =>
-          gsap.to(shadow11,0.5,{stagger: 0.2, attr: { dx: 0, dy: 0, stdDeviation: 0},},"<")
-        }
+        onMouseEnter={() => handleHoverHexEnter(11)}
+        onMouseLeave={() => handleHoverHexExit(11)}
       />
       <path
         filter="url(#shadow12)"
@@ -510,12 +469,8 @@ const HexSVG = ({ path, dark }) => {
         fill="#fff"
         stroke="#d0d0d0"
         strokeMiterlimit="10"
-        onMouseEnter={() =>
-          gsap.to(shadow12,0.5,{stagger: 0.2,attr: { dx: 10, dy: 0, stdDeviation: 5},},"<")
-        }
-        onMouseLeave={() =>
-          gsap.to(shadow12,0.5,{stagger: 0.2, attr: { dx: 0, dy: 0, stdDeviation: 0},},"<")
-        }
+        onMouseEnter={() => handleHoverHexEnter(12)}
+        onMouseLeave={() => handleHoverHexExit(12)}
       />
       <path
         filter="url(#shadow13)"
@@ -529,12 +484,8 @@ const HexSVG = ({ path, dark }) => {
         fill="#fff"
         stroke="#d0d0d0"
         strokeMiterlimit="10"
-        onMouseEnter={() =>
-          gsap.to(shadow13,0.5,{stagger: 0.2,attr: { dx: 10, dy: 0, stdDeviation: 5},},"<")
-        }
-        onMouseLeave={() =>
-          gsap.to(shadow13,0.5,{stagger: 0.2, attr: { dx: 0, dy: 0, stdDeviation: 0},},"<")
-        }
+        onMouseEnter={() => handleHoverHexEnter(13)}
+        onMouseLeave={() => handleHoverHexExit(13)}
       />
       <path
         filter="url(#shadow14)"
@@ -548,12 +499,8 @@ const HexSVG = ({ path, dark }) => {
         fill="#fff"
         stroke="#d0d0d0"
         strokeMiterlimit="10"
-        onMouseEnter={() =>
-          gsap.to(shadow14,0.5,{stagger: 0.2,attr: { dx: 10, dy: 0, stdDeviation: 5},},"<")
-        }
-        onMouseLeave={() =>
-          gsap.to(shadow14,0.5,{stagger: 0.2, attr: { dx: 0, dy: 0, stdDeviation: 0},},"<")
-        }
+        onMouseEnter={() => handleHoverHexEnter(14)}
+        onMouseLeave={() => handleHoverHexExit(14)}
       />
       <path
         filter="url(#shadow15)"
@@ -567,12 +514,8 @@ const HexSVG = ({ path, dark }) => {
         fill="#fff"
         stroke="#d0d0d0"
         strokeMiterlimit="10"
-        onMouseEnter={() =>
-          gsap.to(shadow15,0.5,{stagger: 0.2,attr: { dx: 10, dy: 0, stdDeviation: 5},},"<")
-        }
-        onMouseLeave={() =>
-          gsap.to(shadow15,0.5,{stagger: 0.2, attr: { dx: 0, dy: 0, stdDeviation: 0},},"<")
-        }
+        onMouseEnter={() => handleHoverHexEnter(15)}
+        onMouseLeave={() => handleHoverHexExit(15)}
       />
     </svg>
   );
