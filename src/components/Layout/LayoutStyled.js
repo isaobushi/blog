@@ -6,7 +6,7 @@ const Global = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: ${props => (props.dark ? "#2d3748" : "snow")};
+  background-color: ${props => (props.dark ? "#2d3748" : "white")};
   color: ${props => (props.dark ? "snow" : "#2d3748")};
   transition: all 0.2s ease-in-out;
   padding: 0 2rem;

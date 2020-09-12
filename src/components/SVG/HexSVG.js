@@ -120,7 +120,7 @@ const HexSVG = ({ path, dark }) => {
             dx="0"
             dy="0"
             stdDeviation="0"
-            floodColor="orange"
+            floodColor="#d0d0d0"
           />
         </filter>
         <filter id="shadow2">
@@ -132,7 +132,7 @@ const HexSVG = ({ path, dark }) => {
             dx="0"
             dy="0"
             stdDeviation="0"
-            floodColor="orange"
+            floodColor="#d0d0d0"
           />
         </filter>
         <filter id="shadow3">
@@ -144,7 +144,7 @@ const HexSVG = ({ path, dark }) => {
             dx="0"
             dy="0"
             stdDeviation="0"
-            floodColor="orange"
+            floodColor="#d0d0d0"
           />
         </filter>
         <filter id="shadow4">
@@ -156,7 +156,7 @@ const HexSVG = ({ path, dark }) => {
             dx="0"
             dy="0"
             stdDeviation="0"
-            floodColor="orange"
+            floodColor="#d0d0d0"
           />
         </filter>
         <filter id="shadow5">
@@ -168,7 +168,7 @@ const HexSVG = ({ path, dark }) => {
             dx="0"
             dy="0"
             stdDeviation="0"
-            floodColor="orange"
+            floodColor="#d0d0d0"
           />
         </filter>
         <filter id="shadow6">
@@ -180,7 +180,7 @@ const HexSVG = ({ path, dark }) => {
             dx="0"
             dy="0"
             stdDeviation="0"
-            floodColor="orange"
+            floodColor="#d0d0d0"
           />
         </filter>
         <filter id="shadow7">
@@ -192,7 +192,7 @@ const HexSVG = ({ path, dark }) => {
             dx="0"
             dy="0"
             stdDeviation="0"
-            floodColor="orange"
+            floodColor="#d0d0d0"
           />
         </filter>
         <filter id="shadow8">
@@ -204,7 +204,7 @@ const HexSVG = ({ path, dark }) => {
             dx="0"
             dy="0"
             stdDeviation="0"
-            floodColor="orange"
+            floodColor="#d0d0d0"
           />
         </filter>
         <filter id="shadow9">
@@ -216,7 +216,7 @@ const HexSVG = ({ path, dark }) => {
             dx="0"
             dy="0"
             stdDeviation="0"
-            floodColor="orange"
+            floodColor="#d0d0d0"
           />
         </filter>
         <filter id="shadow10">
@@ -228,7 +228,7 @@ const HexSVG = ({ path, dark }) => {
             dx="0"
             dy="0"
             stdDeviation="0"
-            floodColor="orange"
+            floodColor="#d0d0d0"
           />
         </filter>
         <filter id="shadow11">
@@ -240,7 +240,7 @@ const HexSVG = ({ path, dark }) => {
             dx="0"
             dy="0"
             stdDeviation="0"
-            floodColor="orange"
+            floodColor="#d0d0d0"
           />
         </filter>
         <filter id="shadow12">
@@ -252,7 +252,7 @@ const HexSVG = ({ path, dark }) => {
             dx="0"
             dy="0"
             stdDeviation="0"
-            floodColor="orange"
+            floodColor="#d0d0d0"
           />
         </filter>
         <filter id="shadow13">
@@ -264,7 +264,7 @@ const HexSVG = ({ path, dark }) => {
             dx="0"
             dy="0"
             stdDeviation="0"
-            floodColor="orange"
+            floodColor="#d0d0d0"
           />
         </filter>
         <filter id="shadow14">
@@ -276,7 +276,7 @@ const HexSVG = ({ path, dark }) => {
             dx="0"
             dy="0"
             stdDeviation="0"
-            floodColor="orange"
+            floodColor="#d0d0d0"
           />
         </filter>
         <filter id="shadow15">
@@ -288,7 +288,7 @@ const HexSVG = ({ path, dark }) => {
             dx="0"
             dy="0"
             stdDeviation="0"
-            floodColor="orange"
+            floodColor="#d0d0d0"
           />
         </filter>
       </defs>
