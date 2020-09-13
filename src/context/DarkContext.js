@@ -4,7 +4,7 @@ import {getInitialMode} from '../helpers/darkMode'
 
 export const DarkContext = createContext();
 
-const DarkProvider = ({ children }) => {
+export const DarkProvider = ({ children }) => {
   const [dark, setDark] = useState(getInitialMode())
   useEffect(() => {
     typeof window !== "undefined" && window.localStorage.setItem("dark", dark);
@@ -16,4 +16,3 @@ const DarkProvider = ({ children }) => {
   );
 }
 
-export default DarkProvider;

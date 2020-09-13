@@ -1,6 +1,6 @@
 import React from 'react'
 import "./src/global.css"
-import DarkProvider from "./src/context/DarkContext";
+import {DarkProvider} from "./src/context/DarkContext";
 import {ThemeProvider} from 'styled-components'
 
 export const wrapRootElement = ({ element }) => (

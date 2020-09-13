@@ -20,14 +20,14 @@ const Nav = ({ dark }) => (
         <a href="https://twitter.com/MrMele" target="blank">
           <Text dark={dark}>
             <img src={SvgTwitter} alt="twitter logo"/>
-            <div style={{ padding: 5 }}>Twitter</div>
+            <div style={{ padding: "5px 2px" }}>Twitter</div>
           </Text>
         </a>
         <a href="https://github.com/isaobushi" target="blank">
           <Text dark={dark}>
             {" "}
             <img src={SvgGitHub} alt="GitHub Logo"/>
-            <div style={{ padding: 5 }}>GitHub</div>
+            <div style={{ padding: "5px 2px" }}>GitHub</div>
           </Text>
         </a>
       </List>
