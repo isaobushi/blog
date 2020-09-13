@@ -27,11 +27,19 @@ const SVGLogo = ({path, dark}) => {
     MorphSVGPlugin.convertToPath(usbCircle)
     {/* prettier-ignore */ }
     /* eslint-disable */
-    tl.to(letterA, 0.5, { morphSVG: bracketStart, fill: "#F58F29" })
-      .to(letterD, 0.5, { morphSVG: switchCircle, fill: "#6279B8" }, "<")
+      tl.to(
+        letterA, {
+        duration: 0.5,
+        morphSVG: bracketStart,
+        fill: "#F58F29",
+      })
+      .to(
+        letterD,
+        { duration: 0.5, morphSVG: switchCircle, fill: "#6279B8" },
+        "<"
+      )
       .fromTo(
         switchLine,
-        0.5,
         { yPercent: -500, opacity: 0, fill: "#4c9f70" },
         { yPercent: 0, opacity: 1, fill: "#4C9F70" },
         "<"
@@ -53,21 +61,22 @@ const SVGLogo = ({path, dark}) => {
       )
       .to(
         letterE,
-        0.5,
-        { rotate: 90, transformOrigin: "50% 50%", xPercent: 15 },
+        { duration: 0.5, rotate: 90, transformOrigin: "50% 50%", xPercent: 15 },
         "<"
       )
-      .to(letterE, 0.5, { morphSVG: usb, fill: "rgb(213, 108, 242)" }, "<")
+      .to(
+        letterE,
+        { duration: 0.5, morphSVG: usb, fill: "rgb(213, 108, 242)" },
+        "<"
+      )
       .to(
         letterAEnd,
-        0.5,
-        { morphSVG: bracketEnd, fill: "#E63946", xPercent: 60 },
+        { duration: 0.5, morphSVG: bracketEnd, fill: "#E63946", xPercent: 60 },
         "<"
       )
       .fromTo(
         lineCode,
-        0.5,
-        { opacity: 0, yPercent: -300, xPercent: 100 },
+        { duration: 0.5, opacity: 0, yPercent: -300, xPercent: 100 },
         { opacity: 1, yPercent: -5, xPercent: 100 }
       );}
   }, [])

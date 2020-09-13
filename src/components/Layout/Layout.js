@@ -1,17 +1,16 @@
-import React, { useState, useEffect, useRef, useContext } from "react";
+import React, { useEffect, useRef, useContext } from "react";
 import { Container, Global } from "./LayoutStyled";
 import gsap from 'gsap'
 import Header from "../Header/Header";
 import Nav from "../Nav/Nav";
 import Footer from "../Footer/Footer";
-import { getInitialMode } from "../../helpers/darkMode";
 import SEO from "../SEO/SEO";
 import {DarkContext} from "../../context/DarkContext"
 
 const Layout = ({ children, path }) => {
   const {dark} = useContext(DarkContext)
   let rule = useRef(null)
-
+  
   useEffect(() => {    
     if (path === "/") {
       const tl = gsap.timeline();

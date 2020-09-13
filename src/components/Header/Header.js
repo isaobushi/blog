@@ -5,9 +5,8 @@ import { SVGLogo } from "../Logo"
 import { DarkModeSVG } from "../SVG/DarkModeSVG"
 import {DarkContext} from '../../context/DarkContext'
 
-export default ({ cb, value, path }) => {
+export default ({ path }) => {
   let { dark, setDark } = useContext(DarkContext)
-  console.log(dark)
   return (
     <Container>
       <Link to="/">
