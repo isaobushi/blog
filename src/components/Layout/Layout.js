@@ -29,6 +29,7 @@ const Layout = ({ children, path }) => {
             ref={el => {
               rule = el;
             }}
+            style={{ borderColor: "#5e6572" }}
           />
           {children}
         </Container>
