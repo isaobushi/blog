@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useContext } from "react";
-import { Container, Global, Button } from "./LayoutStyled";
+import { Container, Global } from "./LayoutStyled";
 import gsap from 'gsap'
 import Header from "../Header/Header";
 import Nav from "../Nav/Nav";
@@ -31,7 +31,6 @@ const Layout = ({ children, path }) => {
             }}
             style={{ borderColor: "#5e6572" }}
           />
-          <Button />
           {children}
         </Container>
         <Footer />

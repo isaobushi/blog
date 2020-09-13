@@ -33,11 +33,12 @@ const HexSVG = ({ path, dark }) => {
   let Hex13 = useRef(null)
   let Hex14 = useRef(null)
   let Hex15 = useRef(null)
-  const handleHoverHexEnter = (id) => gsap.to(`#shadow-${id}`,0.5,{stagger: 0.2,attr: { dx: 10, dy: 0, stdDeviation: 5},},"<")
+  const handleHoverHexEnter = (id) => gsap.to(`#shadow-${id}`,0.5,{stagger: 0.2,attr: { dx: 10, dy: 10, stdDeviation: 15},},"<")
   const handleHoverHexExit = (id) =>gsap.to(`#shadow-${id}`,0.5,{stagger: 0.2, attr: { dx: 0, dy: 0, stdDeviation: 0},},"<")
  
           
   useEffect(() => {
+    let tl = gsap.timeline()
     let hexes = [
       Hex1,
       Hex2,
@@ -56,20 +57,21 @@ const HexSVG = ({ path, dark }) => {
       Hex15,
     ];
     if (typeof window !== "undefined") gsap.registerPlugin(DrawSVGPlugin);
-    gsap.fromTo(
-      hexes,
-      2,
-      { drawSVG: "0%" },
-      {
-        drawSVG: "100%",
-        stagger: {
-          grid: [7, 15],
-          from: "end",
-          ease: "power2.in",
-          amount: 1.5,
-        },
-      }
-    );
+    tl.fromTo(
+      hexes,{}, {}
+      // { drawSVG: "0%", duration: 2 },
+      // {
+      //   drawSVG: "100%",
+      //   duration: 2,
+      //   stagger: {
+      //     grid: [0, 15],
+      //     from: "end",
+      //     ease: "power2.in",
+      //     amount: 1.5,
+      //   },
+      // }
+    )
+    .fromTo(hexes, { drawSVG: "100%",duration:.4 }, { stagger: .1,drawSVG: "0%",duration:.4, stroke: "rgb(94, 101, 114)", strokeWidth: 1 });
     gsap.fromTo(
       [
         shadow1,
@@ -88,7 +90,7 @@ const HexSVG = ({ path, dark }) => {
         shadow14,
         shadow15,
       ],
-      {duration:2, attr: { dx: 0, dy: 0, stdDeviation: 0 } },
+      { duration: 2, attr: { dx: 0, dy: 0, stdDeviation: 0 } },
       {
         attr: { dx: 10, dy: 10, stdDeviation: 10 },
         stagger: {
@@ -96,7 +98,7 @@ const HexSVG = ({ path, dark }) => {
           from: "end",
           ease: "power2.in",
           amount: 1.5,
-        },
+        }
       }
     );
   }, []);
