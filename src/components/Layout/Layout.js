@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useContext } from "react";
 import { Container, Global } from "./LayoutStyled";
 import gsap from 'gsap'
 import Header from "../Header/Header";
@@ -6,35 +6,36 @@ import Nav from "../Nav/Nav";
 import Footer from "../Footer/Footer";
 import { getInitialMode } from "../../helpers/darkMode";
 import SEO from "../SEO/SEO";
+import {DarkContext} from "../../context/DarkContext"
 
 const Layout = ({ children, path }) => {
-  const [dark, setDark] = useState(getInitialMode());
+  const {dark} = useContext(DarkContext)
   let rule = useRef(null)
-  useEffect(() => {
-    typeof window !== "undefined" && window.localStorage.setItem("dark", dark);
+
+  useEffect(() => {    
     if (path === "/") {
       const tl = gsap.timeline();
-      tl.fromTo(rule, 1.5, { width: "0%", opacity:0 }, { width: "100%", opacity: 1 })
+      tl.fromTo(rule,  {duration: 1.5, width: "0%", opacity:0 }, { width: "100%", opacity: 1 })
     }
   }, [dark, path]);
 
   return (
     <>
       <SEO />
-      <Global dark={dark}>
-        <Container>
-          <Header cb={setDark} value={dark} path={path}></Header>
-          <Nav dark={dark} />
-          <hr
-            ref={el => {
-              rule = el;
-            }}
-            style={{ borderColor: "#5e6572" }}
-          />
-          {children}
-        </Container>
-        <Footer />
-      </Global>
+        <Global dark={dark}>
+          <Container>
+            <Header  path={path}></Header>
+            <Nav variant="primary" dark={dark} />
+            <hr
+              ref={el => {
+                rule = el;
+              }}
+              style={{ borderColor: "#5e6572" }}
+            />
+            {children}
+          </Container>
+          <Footer />
+        </Global>
     </>
   );
 };

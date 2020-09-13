@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import * as theme from '../../styles/Theme'
 
 const Container = styled.div`
   display: flex;
@@ -15,6 +16,7 @@ const Text = styled.div`
   &:hover {
     color: #ff8300;
     transform: scale(1.1);
+    font-size: ${theme.fontSize}
   }
 `
 
