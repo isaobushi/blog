@@ -7,7 +7,6 @@ export const DarkContext = createContext();
 const DarkProvider = ({ children }) => {
   const [dark, setDark] = useState(getInitialMode())
   useEffect(() => {
-    console.log(dark)
     typeof window !== "undefined" && window.localStorage.setItem("dark", dark);
   }, [dark])
   return (

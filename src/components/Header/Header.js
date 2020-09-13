@@ -1,6 +1,6 @@
 import React, { useContext } from "react"
 import { Link } from "gatsby"
-import { Container, Icon } from "./HeaderStyled"
+import { Container } from "./HeaderStyled"
 import { SVGLogo } from "../Logo"
 import { DarkModeSVG } from "../SVG/DarkModeSVG"
 import {DarkContext} from '../../context/DarkContext'
@@ -12,11 +12,7 @@ export default ({ path }) => {
       <Link to="/">
         <SVGLogo path={path} dark={dark} />
       </Link>
-      <Icon
-        onClick={()=> setDark(!dark)}
-      >
-        <DarkModeSVG dark={dark} />
-      </Icon>
+      <DarkModeSVG dark={dark} cb={setDark} />
     </Container>
   );
 }

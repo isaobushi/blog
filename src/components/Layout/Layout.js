@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useContext } from "react";
-import { Container, Global } from "./LayoutStyled";
+import { Container, Global, Button } from "./LayoutStyled";
 import gsap from 'gsap'
 import Header from "../Header/Header";
 import Nav from "../Nav/Nav";
@@ -10,7 +10,7 @@ import {DarkContext} from "../../context/DarkContext"
 const Layout = ({ children, path }) => {
   const {dark} = useContext(DarkContext)
   let rule = useRef(null)
-  
+
   useEffect(() => {    
     if (path === "/") {
       const tl = gsap.timeline();
@@ -21,20 +21,21 @@ const Layout = ({ children, path }) => {
   return (
     <>
       <SEO />
-        <Global dark={dark}>
-          <Container>
-            <Header  path={path}></Header>
-            <Nav variant="primary" dark={dark} />
-            <hr
-              ref={el => {
-                rule = el;
-              }}
-              style={{ borderColor: "#5e6572" }}
-            />
-            {children}
-          </Container>
-          <Footer />
-        </Global>
+      <Global dark={dark}>
+        <Container>
+          <Header path={path}></Header>
+          <Nav variant="primary" dark={dark} />
+          <hr
+            ref={el => {
+              rule = el;
+            }}
+            style={{ borderColor: "#5e6572" }}
+          />
+          <Button />
+          {children}
+        </Container>
+        <Footer />
+      </Global>
     </>
   );
 };

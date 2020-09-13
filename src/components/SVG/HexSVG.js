@@ -38,25 +38,26 @@ const HexSVG = ({ path, dark }) => {
  
           
   useEffect(() => {
+    let hexes = [
+      Hex1,
+      Hex2,
+      Hex3,
+      Hex4,
+      Hex5,
+      Hex6,
+      Hex7,
+      Hex8,
+      Hex9,
+      Hex10,
+      Hex11,
+      Hex12,
+      Hex13,
+      Hex14,
+      Hex15,
+    ];
     if (typeof window !== "undefined") gsap.registerPlugin(DrawSVGPlugin);
     gsap.fromTo(
-      [
-        Hex1,
-        Hex2,
-        Hex3,
-        Hex4,
-        Hex5,
-        Hex6,
-        Hex7,
-        Hex8,
-        Hex9,
-        Hex10,
-        Hex11,
-        Hex12,
-        Hex13,
-        Hex14,
-        Hex15,
-      ],
+      hexes,
       2,
       { drawSVG: "0%" },
       {
@@ -300,7 +301,7 @@ const HexSVG = ({ path, dark }) => {
         className="hex"
         d="M585.44,596.57l41.25-88.72a5,5,0,0,0,0-4.2l-41.25-88.72a3.38,3.38,0,0,0-3-2.13H506.83a3.38,3.38,0,0,0-3,2.13l-41.25,88.72a5,5,0,0,0,0,4.2l41.25,88.72a3.38,3.38,0,0,0,3,2.13h75.63A3.38,3.38,0,0,0,585.44,596.57Z"
         transform="translate(-215.8 -40.5)"
-        fill="#fff"
+        fill="#f1f3f6"
         stroke="#d7ddeb"
         strokeMiterlimit="10"
         onMouseEnter={() => handleHoverHexEnter(1)}
@@ -315,7 +316,7 @@ const HexSVG = ({ path, dark }) => {
         className="hex"
         d="M462.68,875.42l41.26-88.73a5.1,5.1,0,0,0,0-4.19l-41.26-88.72a3.38,3.38,0,0,0-3-2.13H384.07a3.38,3.38,0,0,0-3,2.13L339.83,782.5a5.13,5.13,0,0,0,0,4.2l41.26,88.72a3.38,3.38,0,0,0,3,2.13H459.7A3.38,3.38,0,0,0,462.68,875.42Z"
         transform="translate(-215.8 -40.5)"
-        fill="#fff"
+        fill="#f1f3f6"
         stroke="#d7ddeb"
         strokeMiterlimit="10"
         onMouseEnter={() => handleHoverHexEnter(2)}
@@ -330,7 +331,7 @@ const HexSVG = ({ path, dark }) => {
         className="hex"
         d="M339.61,224.77l41.25-88.72a5.1,5.1,0,0,0,0-4.19L339.61,43.13a3.4,3.4,0,0,0-3-2.13H261a3.38,3.38,0,0,0-3,2.13l-41.26,88.73a5.1,5.1,0,0,0,0,4.19L258,224.77a3.38,3.38,0,0,0,3,2.13h75.63A3.4,3.4,0,0,0,339.61,224.77Z"
         transform="translate(-215.8 -40.5)"
-        fill="#fff"
+        fill="#f1f3f6"
         stroke="#d7ddeb"
         strokeMiterlimit="10"
         onMouseEnter={() => handleHoverHexEnter(3)}
@@ -345,7 +346,7 @@ const HexSVG = ({ path, dark }) => {
         className="hex"
         d="M831.28,410.67,872.53,322a5.1,5.1,0,0,0,0-4.19L831.28,229a3.4,3.4,0,0,0-3-2.13H752.66a3.38,3.38,0,0,0-3,2.13l-41.26,88.73a5.1,5.1,0,0,0,0,4.19l41.26,88.72a3.38,3.38,0,0,0,3,2.13h75.63A3.4,3.4,0,0,0,831.28,410.67Z"
         transform="translate(-215.8 -40.5)"
-        fill="#fff"
+        fill="#f1f3f6"
         stroke="#d7ddeb"
         strokeMiterlimit="10"
         onMouseEnter={() => handleHoverHexEnter(4)}
@@ -360,7 +361,7 @@ const HexSVG = ({ path, dark }) => {
         className="hex"
         d="M831.28,596.57l41.25-88.72a5.12,5.12,0,0,0,0-4.2l-41.25-88.72a3.4,3.4,0,0,0-3-2.13H752.66a3.38,3.38,0,0,0-3,2.13l-41.26,88.72a5.13,5.13,0,0,0,0,4.2l41.26,88.72a3.38,3.38,0,0,0,3,2.13h75.63A3.4,3.4,0,0,0,831.28,596.57Z"
         transform="translate(-215.8 -40.5)"
-        fill="#fff"
+        fill="#f1f3f6"
         stroke="#d7ddeb"
         strokeMiterlimit="10"
         onMouseEnter={() => handleHoverHexEnter(5)}
@@ -375,7 +376,7 @@ const HexSVG = ({ path, dark }) => {
         className="hex"
         d="M954,689.52l41.26-88.72a5.13,5.13,0,0,0,0-4.2L954,507.88a3.38,3.38,0,0,0-3-2.13H875.42a3.39,3.39,0,0,0-3,2.13L831.18,596.6a5.13,5.13,0,0,0,0,4.2l41.25,88.72a3.39,3.39,0,0,0,3,2.13h75.63A3.38,3.38,0,0,0,954,689.52Z"
         transform="translate(-215.8 -40.5)"
-        fill="#fff"
+        fill="#f1f3f6"
         stroke="#d7ddeb"
         strokeMiterlimit="10"
         onMouseEnter={() => handleHoverHexEnter(6)}
@@ -390,7 +391,7 @@ const HexSVG = ({ path, dark }) => {
         className="hex"
         d="M1077.11,782.47l41.25-88.72a5,5,0,0,0,0-4.2l-41.25-88.72a3.38,3.38,0,0,0-3-2.13H998.5a3.38,3.38,0,0,0-3,2.13l-41.25,88.72a5,5,0,0,0,0,4.2l41.25,88.72a3.38,3.38,0,0,0,3,2.13h75.63A3.38,3.38,0,0,0,1077.11,782.47Z"
         transform="translate(-215.8 -40.5)"
-        fill="#fff"
+        fill="#f1f3f6"
         stroke="#d7ddeb"
         strokeMiterlimit="10"
         onMouseEnter={() => handleHoverHexEnter(7)}
@@ -405,7 +406,7 @@ const HexSVG = ({ path, dark }) => {
         className="hex"
         d="M339.61,596.57l41.25-88.72a5.12,5.12,0,0,0,0-4.2l-41.25-88.72a3.4,3.4,0,0,0-3-2.13H261a3.38,3.38,0,0,0-3,2.13l-41.26,88.72a5.13,5.13,0,0,0,0,4.2L258,596.57a3.38,3.38,0,0,0,3,2.13h75.63A3.4,3.4,0,0,0,339.61,596.57Z"
         transform="translate(-215.8 -40.5)"
-        fill="#fff"
+        fill="#f1f3f6"
         stroke="#d7ddeb"
         strokeMiterlimit="10"
         onMouseEnter={() => handleHoverHexEnter(8)}
@@ -420,7 +421,7 @@ const HexSVG = ({ path, dark }) => {
         className="hex"
         d="M708.36,689.52l41.25-88.72a5,5,0,0,0,0-4.2l-41.25-88.72a3.38,3.38,0,0,0-3-2.13H629.74a3.38,3.38,0,0,0-3,2.13L585.51,596.6a5,5,0,0,0,0,4.2l41.25,88.72a3.38,3.38,0,0,0,3,2.13h75.63A3.38,3.38,0,0,0,708.36,689.52Z"
         transform="translate(-215.8 -40.5)"
-        fill="#fff"
+        fill="#f1f3f6"
         stroke="#d7ddeb"
         strokeMiterlimit="10"
         onMouseEnter={() => handleHoverHexEnter(9)}
@@ -435,7 +436,7 @@ const HexSVG = ({ path, dark }) => {
         className="hex"
         d="M462.68,689.52l41.26-88.72a5.13,5.13,0,0,0,0-4.2l-41.26-88.72a3.38,3.38,0,0,0-3-2.13H384.07a3.38,3.38,0,0,0-3,2.13L339.83,596.6a5.13,5.13,0,0,0,0,4.2l41.26,88.72a3.38,3.38,0,0,0,3,2.13H459.7A3.38,3.38,0,0,0,462.68,689.52Z"
         transform="translate(-215.8 -40.5)"
-        fill="#fff"
+        fill="#f1f3f6"
         stroke="#d7ddeb"
         strokeMiterlimit="10"
         onMouseEnter={() => handleHoverHexEnter(10)}
@@ -450,7 +451,7 @@ const HexSVG = ({ path, dark }) => {
         className="hex"
         d="M708.36,503.62l41.25-88.72a5,5,0,0,0,0-4.2L708.36,322a3.38,3.38,0,0,0-3-2.13H629.74a3.38,3.38,0,0,0-3,2.13L585.51,410.7a5,5,0,0,0,0,4.2l41.25,88.72a3.38,3.38,0,0,0,3,2.13h75.63A3.38,3.38,0,0,0,708.36,503.62Z"
         transform="translate(-215.8 -40.5)"
-        fill="#fff"
+        fill="#f1f3f6"
         stroke="#d7ddeb"
         strokeMiterlimit="10"
         onMouseEnter={() => handleHoverHexEnter(11)}
@@ -465,7 +466,7 @@ const HexSVG = ({ path, dark }) => {
         className="hex"
         d="M708.36,317.72,749.61,229a5,5,0,0,0,0-4.19l-41.25-88.73a3.38,3.38,0,0,0-3-2.13H629.74a3.38,3.38,0,0,0-3,2.13l-41.25,88.73a5,5,0,0,0,0,4.19l41.25,88.72a3.38,3.38,0,0,0,3,2.13h75.63A3.38,3.38,0,0,0,708.36,317.72Z"
         transform="translate(-215.8 -40.5)"
-        fill="#fff"
+        fill="#f1f3f6"
         stroke="#d7ddeb"
         strokeMiterlimit="10"
         onMouseEnter={() => handleHoverHexEnter(12)}
@@ -480,7 +481,7 @@ const HexSVG = ({ path, dark }) => {
         className="hex"
         d="M462.68,503.62l41.26-88.72a5.13,5.13,0,0,0,0-4.2L462.68,322a3.38,3.38,0,0,0-3-2.13H384.07a3.38,3.38,0,0,0-3,2.13L339.83,410.7a5.12,5.12,0,0,0,0,4.2l41.26,88.72a3.38,3.38,0,0,0,3,2.13H459.7A3.38,3.38,0,0,0,462.68,503.62Z"
         transform="translate(-215.8 -40.5)"
-        fill="#fff"
+        fill="#f1f3f6"
         stroke="#d7ddeb"
         strokeMiterlimit="10"
         onMouseEnter={() => handleHoverHexEnter(13)}
@@ -495,7 +496,7 @@ const HexSVG = ({ path, dark }) => {
         className="hex"
         d="M585.44,410.67,626.69,322a5,5,0,0,0,0-4.19L585.44,229a3.38,3.38,0,0,0-3-2.13H506.83a3.38,3.38,0,0,0-3,2.13l-41.25,88.73a5,5,0,0,0,0,4.19l41.25,88.72a3.38,3.38,0,0,0,3,2.13h75.63A3.38,3.38,0,0,0,585.44,410.67Z"
         transform="translate(-215.8 -40.5)"
-        fill="#fff"
+        fill="#f1f3f6"
         stroke="#d7ddeb"
         strokeMiterlimit="10"
         onMouseEnter={() => handleHoverHexEnter(14)}
@@ -510,7 +511,7 @@ const HexSVG = ({ path, dark }) => {
         className="hex"
         d="M462.68,317.72,503.94,229a5.1,5.1,0,0,0,0-4.19l-41.26-88.73a3.38,3.38,0,0,0-3-2.13H384.07a3.38,3.38,0,0,0-3,2.13l-41.26,88.73a5.1,5.1,0,0,0,0,4.19l41.26,88.72a3.38,3.38,0,0,0,3,2.13H459.7A3.38,3.38,0,0,0,462.68,317.72Z"
         transform="translate(-215.8 -40.5)"
-        fill="#fff"
+        fill="#f1f3f6"
         stroke="#d7ddeb"
         strokeMiterlimit="10"
         onMouseEnter={() => handleHoverHexEnter(15)}

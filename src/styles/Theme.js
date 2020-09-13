@@ -6,9 +6,11 @@ const fontSize = theme("mode", "variant", {
     dark: "8rem",
   },
 });
- const buttonBackgroundColor = theme("mode", {
-  light: "#222",
-  dark: "#eee",
+const buttonBackgroundColor = theme("mode", "variant", {
+  default: { light: "gray", dark: "darkgray" },
+  primary: { light: "blue", dark: "darkblue" },
+  success: { light: "green", dark: "darkgreen" },
+  warning: { light: "orange", dark: "darkorange" }
 });
  const buttonTextColor = theme("mode", {
   light: "white",

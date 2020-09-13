@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { MorphSVGPlugin } from "gsap/MorphSVGPlugin.js";
 
-const DarkModeSVG = ({ dark }) => {
+const DarkModeSVG = ({ dark, cb }) => {
   // const [,isDark] = useState(dark);
   let mainCircle = useRef()
   let raySmallOne = useRef()
@@ -61,6 +61,7 @@ const DarkModeSVG = ({ dark }) => {
   });
 
   const handleToogleDarkMode = (e) => {
+    cb(!dark);
     e.preventDefault();
     tl.reversed() ? tl.play() : tl.reverse()
   };
