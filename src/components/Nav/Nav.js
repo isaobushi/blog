@@ -9,7 +9,7 @@ const Nav = ({ dark }) => (
         <Link to="/Blog/" state={{ dark }}>
           <Text dark={dark}>Blog</Text>
         </Link>
-        <Link to="/">
+        <Link to="/About">
           <Text dark={dark}>About</Text>
         </Link>
       </List>
