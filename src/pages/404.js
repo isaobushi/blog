@@ -21,7 +21,7 @@ const FourOFour = () => {
     ローマ由来のアルファベット（ラテン文字）を用いて日本語を表記することもでき、日本ではローマ字と呼ばれる。個々のラテン文字を、イニシャルや略号として、漢字・かなと併用して記すことは普通に行われているが、母語話者が文章全体をローマ字で記すこと は稀である。BYR color wheel.svg 	この項目では色を扱っています。閲覧環境によっては、色が適切に表示されていない場合があります。(Template:色)
     一例として朝日新聞のニュース記事（2004年4月19日）の見出しを次に示す。ここでは上記4種類の文字システムがすべて用いられている。漢字は太字オレンジ[1]、ひらがなは青[2]、カタカナは緑[3]、ラテン文字とアラビア数字は下線灰色[4]で示す`
   
-  let originalText = `Human Error: --force -n2 law echo "A robot must obey the orders
+  let originalText = `Human Error: run --force -n2 law | echo "A robot must obey the orders
           given it by human beings except where such orders would conflict with
           the First Law."`
 
@@ -46,7 +46,7 @@ const FourOFour = () => {
       .to(page, {
         duration: 1,
         boxShadow: `18px 18px 20px #d1d9e6, -18px -18px 20px #ffffff`,
-      })
+      }, "<")
       .to(
         text,
         {
