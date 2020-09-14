@@ -1,8 +1,11 @@
 import React, { createContext, useEffect, useState } from "react";
 import {getInitialMode} from '../helpers/darkMode'
 
+const defaultState = {
+  dark: false
+}
 
-export const DarkContext = createContext();
+export const DarkContext = createContext(defaultState);
 
 export const DarkProvider = ({ children }) => {
   const [dark, setDark] = useState(getInitialMode())
