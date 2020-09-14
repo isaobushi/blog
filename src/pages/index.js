@@ -7,7 +7,6 @@ export default ({ location }) => {
   return (
     <Layout path={path}>
       <HexSVG />
-      <HexSVG />
     </Layout>
   );
 }
