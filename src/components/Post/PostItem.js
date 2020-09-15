@@ -1,6 +1,7 @@
 import React from "react";
 import { CardItem, DateButton, Main, Tags, Title } from "./PostItemStyled";
 import { Subtext } from "../General/Typography/Typography";
+import { Link } from "gatsby";
 /**
  * Primary UI component for user interaction
  */
@@ -19,7 +20,9 @@ const PostItem = ({ title, date, tags, slug, dark, post, ...props }) => {
         <span>NOV</span>
       </DateButton>
       <Main>
-        <Title dark={dark}>{title}</Title>
+        <Title as={Link} to={`${slug}`} dark={dark}>
+          {title}
+        </Title>
         <Tags>
           {tags.map((tag, i) => (
             <Subtext key={tag + i} variant="default">

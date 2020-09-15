@@ -16,7 +16,6 @@ const Title = styled.div`
   text-align: left;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  margin-bottom: 4px;
   padding: 4px 0;
   &:hover {
     border-bottom: 1px solid ${color.accent};
@@ -26,6 +25,7 @@ const Title = styled.div`
 const Tags = styled.div`
   display: flex;
   align-items: center;
+  margin-top: 12px;
 `;
 
 const Main = styled.div`
@@ -52,11 +52,6 @@ const DateButton = styled(Button)`
   display: flex;
   flex-direction: column;
   margin: 0;
-  box-shadow: ${({ dark }) =>
-    dark
-      ? `4px 2px 6px rgba(72, 100, 125, 0.24), inset -2px -2px 6px rgba(72, 100, 125, 0.43)`
-      : `6px 4px 15px rgba(72, 100, 125, 0.3),
-    inset -2px -2px 5px rgba(72, 100, 125, 0.1)`};
   span {
     font-family: "Roboto", sans-serif;
     font-weight: 400;

@@ -36,7 +36,7 @@ const Layout = ({ children, path }) => {
               ref={el => {
                 rule = el;
               }}
-              style={{ borderColor: dark ? colors.accent : colors.neutral500 }}
+              style={{ borderColor: dark ? colors.accent : colors.neutral100 }}
             />
             {children}
           </Container>
