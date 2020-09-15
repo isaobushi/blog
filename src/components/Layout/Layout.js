@@ -7,7 +7,7 @@ import Footer from "../Footer/Footer";
 import SEO from "../SEO/SEO";
 import { DarkContext } from "../../context/DarkContext";
 import { ThemeProvider } from "styled-components";
-import * as colors from "../../styles/colors";
+import * as colors from "../../utils/colors";
 
 const Layout = ({ children, path }) => {
   const { dark } = useContext(DarkContext);

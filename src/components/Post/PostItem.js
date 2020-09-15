@@ -1,56 +1,42 @@
-import React from "react"
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import {
-  CardItem,
-  Footer,
-  TextFooter,
-  Title,
-  TagFooter,
-} from "./PostItemStyled"
+import React from "react";
+import { CardItem, DateButton, Main, Tags, Title } from "./PostItemStyled";
+import { Subtext } from "../General/Typography/Typography";
 /**
  * Primary UI component for user interaction
  */
-const PostItem = ({ size, title, date, tags, slug, isDark, ...props }) => {
-  const tagsItems = tags.map(tag => (
-    <TagFooter key={tag + Math.random()} to="/">
-      {tag} •&nbsp;{" "}
-    </TagFooter>
-  ))
+const PostItem = ({ title, date, tags, slug, dark, post, ...props }) => {
+  console.log("PostItem -> post", post);
+  const extimateDurationRead = text => {
+    let lengthText = text.split(" ").length;
+    let minutes = Math.floor(lengthText / 200);
+    return minutes;
+  };
+  let minutes = extimateDurationRead(post);
   return (
     <CardItem>
-      <div>
-        <Title isDark={isDark}>
-          <Link to={`${slug}`}>{title}</Link>
-        </Title>
-      </div>
-      <Footer>
-        <TextFooter>
-          {date} {" • "} {tagsItems}
-        </TextFooter>
-      </Footer>
+      <DateButton variant="default" dark={dark}>
+        <span>24</span>
+        <span>NOV</span>
+      </DateButton>
+      <Main>
+        <Title dark={dark}>{title}</Title>
+        <Tags>
+          {tags.map((tag, i) => (
+            <Subtext key={tag + i} variant="default">
+              {tag}
+            </Subtext>
+          ))}
+        </Tags>
+      </Main>
+      <Subtext variant="accent">{minutes}</Subtext>{" "}
+      <Subtext variant="default">min. read</Subtext>
     </CardItem>
-  )
-}
-
-PostItem.propTypes = {
-  /**
-   * How large should the Card be?
-   */
-  size: PropTypes.oneOf(["small", "medium", "large"]),
-  /**
-   * Card Title content
-   */
-  label: PropTypes.string.isRequired,
-  /**
-   * Optional click handler
-   */
-  onClick: PropTypes.func,
-}
+  );
+};
 
 PostItem.defaultProps = {
   size: "medium",
   onClick: undefined,
-}
+};
 
-export default PostItem
+export default PostItem;

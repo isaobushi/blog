@@ -1,16 +1,16 @@
-import styled from 'styled-components';
-import * as theme from '../../../styles/Theme'
+import styled from "styled-components";
+import * as theme from "../../../utils/Theme";
 
 const H1 = styled.h1`
   font-size: 3rem;
   color: ${theme.textColor};
-  font-family: "ヒラギノ丸ゴ Pro W4", sans-serif; 
+  font-family: "ヒラギノ丸ゴ Pro W4", sans-serif;
   @media (max-width: 768px) {
     font-size: 2rem;
   }
 `;
 
-const H2 = styled.h1`
+const H2 = styled.h2`
   font-size: 2rem;
   color: ${theme.textColor};
   font-family: "ヒラギノ丸ゴ Pro W4", sans-serif;
@@ -19,16 +19,16 @@ const H2 = styled.h1`
   }
 `;
 
-const H3 = styled.h1`
+const H3 = styled.h3`
   font-size: 1rem;
   color: ${theme.textColor};
   font-family: "ヒラギノ丸ゴ Pro W4", sans-serif;
   @media (max-width: 768px) {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 `;
 
-const P = styled.h1`
+const P = styled.p`
   font-size: 1.5rem;
   color: ${theme.textColor};
   font-family: "ヒラギノ丸ゴ Pro W4", sans-serif;
@@ -37,7 +37,7 @@ const P = styled.h1`
   }
 `;
 
-const Subtext = styled.h1`
+const Subtext = styled.p`
   font-size: 1rem;
   color: ${theme.textColor};
   font-family: "ヒラギノ丸ゴ Pro W4", sans-serif;
@@ -46,6 +46,4 @@ const Subtext = styled.h1`
   }
 `;
 
-
-export {H1, H2, H3, P, Subtext}
-
+export { H1, H2, H3, P, Subtext };

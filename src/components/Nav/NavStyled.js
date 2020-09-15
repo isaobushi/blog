@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import * as theme from "../../styles/Theme";
 
 const Container = styled.div`
   display: flex;
@@ -20,13 +19,12 @@ const ListItem = styled.div`
   border-radius: 12px;
   border: 1px solid transparent;
   padding: 8px;
-  margin-right: 8px;
   color: #5e6572;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+  margin-right: 12px;
   &:hover {
     color: #ff8300;
-    font-size: ${theme.fontSize};
     box-shadow: none;
   }
 `;
@@ -44,5 +42,8 @@ const Avatar = styled.img`
 const List = styled.div`
   display: flex;
   width: 50%;
+  & a:last-child {
+    margin-right: 0px;
+  }
 `;
 export { Avatar, Container, List, ListItem };

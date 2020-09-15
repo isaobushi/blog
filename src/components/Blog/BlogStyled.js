@@ -1,19 +1,23 @@
-import styled from "styled-components"
+import styled from "styled-components";
+import * as color from "../../utils";
 
 const BlogHeader = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
   padding: 5vh 0;
-`
-const Item = styled.div``
+`;
+const Item = styled.div`
+  height: 30vh;
+`;
 
 const Title = styled.h1`
   font-family: "ヒラギノ丸ゴ Pro W4", sans-serif;
-  font-size: 3rem;
+  font-size: 10rem;
   margin: 0;
-  color: orange;
-  text-shadow: 1px 1px 2px orangered;
+  color: ${color.neutral200};
+  text-shadow: 6px 6px 12px rgba(151, 156, 164, 0.25),
+    -12px -12px 16px rgba(255, 255, 255, 0.25);
 `;
 
 const ListTags = styled.a`
@@ -29,4 +33,4 @@ const ListTags = styled.a`
   }
 `;
 
-export { BlogHeader, Item, ListTags, Title }
+export { BlogHeader, Item, ListTags, Title };

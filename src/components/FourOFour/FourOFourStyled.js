@@ -18,7 +18,7 @@ const Text404 = styled.h1`
 `;
 
 const Card = styled.div`
-  max-width: 1024px;
+  max-width: 1404px;
   align-self: center;
   display: flex;
   justify-content: center;
@@ -36,6 +36,7 @@ const Text = styled.p`
   line-height: 3rem;
   padding: 0;
   text-shadow: 12px 12px 20px #d1d9e6, -12px -12px 20px #fff;
+  text-align: center;
 `;
 const LinkGoBack = styled.div`
   text-align: center;
@@ -51,7 +52,7 @@ const LinkGoBack = styled.div`
 
   &:hover a {
     transition: all 0.3s ease-in;
-    padding-bottom: .5rem;
+    padding-bottom: 0.5rem;
     border-bottom: 1px solid orange;
     transform: scale(1.01);
   }
