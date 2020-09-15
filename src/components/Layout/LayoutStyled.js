@@ -1,5 +1,4 @@
-import styled from "styled-components"
-
+import styled from "styled-components";
 
 const Global = styled.div`
   display: flex;
@@ -7,8 +6,8 @@ const Global = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: ${props => (props.dark ? "#2d3748" : "#f1f3f6")};
-  color: ${props => (props.dark ? "snow" : "#2d3748")};
+  background-color: ${({ dark }) => (dark ? "#2A2D32" : "#f1f3f6")};
+  color: ${({ dark }) => (dark ? "#f1f3f6" : "#5e6572")};
   transition: all 0.2s ease-in-out;
   padding: 0 2rem;
 `;
@@ -17,7 +16,7 @@ const Container = styled.div`
   width: 100%;
   max-width: 1024px;
   padding-top: 10px;
-`
+`;
 
 const Button = styled.button`
   position: relative;

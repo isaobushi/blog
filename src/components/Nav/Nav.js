@@ -1,38 +1,46 @@
-import React from "react"
-import { Container, List, Text } from "./NavStyled"
-import { Link } from "gatsby"
-import SvgTwitter from '../../assets/img/twitter.svg'
+import React from "react";
+import { Avatar, Container, List } from "./NavStyled";
+import { Button } from "../General/Button/Button";
+import { Link } from "gatsby";
+import SvgTwitter from "../../assets/img/twitter.svg";
 import SvgGitHub from "../../assets/img/github.svg";
-
 
 const Nav = ({ dark }) => (
   <>
     <Container>
       <List>
-        <Link to="/Blog/" state={{ dark }}>
-          <Text dark={dark}>Blog</Text>
-        </Link>
-        <Link to="/About">
-          <Text dark={dark}>About</Text>
-        </Link>
+        <Button variant="default" as={Link} to="/Blog/" dark={dark}>
+          Blog
+        </Button>
+        <Button variant="default" as={Link} to="/About" dark={dark}>
+          About
+        </Button>
       </List>
       <List style={{ justifyContent: "flex-end" }}>
-        <a href="https://twitter.com/MrMele" target="blank">
-          <Text dark={dark}>
-            <img src={SvgTwitter} alt="twitter logo"/>
-            <div style={{ padding: "5px 2px" }}>Twitter</div>
-          </Text>
-        </a>
-        <a href="https://github.com/isaobushi" target="blank">
-          <Text dark={dark}>
-            {" "}
-            <img src={SvgGitHub} alt="GitHub Logo"/>
-            <div style={{ padding: "5px 2px" }}>GitHub</div>
-          </Text>
-        </a>
+        <Button
+          variant="default"
+          as="a"
+          href="https://twitter.com/MrMele"
+          target="blank"
+          dark={dark}
+        >
+          <Avatar src={SvgTwitter} alt="twitter logo" />
+          Twitter
+        </Button>
+        <Button
+          variant="default"
+          as="a"
+          href="https://github.com/isaobushi"
+          target="blank"
+          dark={dark}
+        >
+          {" "}
+          <Avatar src={SvgGitHub} alt="GitHub Logo" />
+          GitHub
+        </Button>
       </List>
     </Container>
   </>
 );
 
-export default Nav
+export default Nav;
