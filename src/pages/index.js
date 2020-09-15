@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { graphql } from "gatsby";
 import Layout from "../components/Layout/Layout.js";
 import { HexSVG } from "../components/SVG/HexSVG.js";
 import { DarkContext } from "../context/DarkContext.js";

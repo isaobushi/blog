@@ -23,6 +23,11 @@ const Button = styled.button`
     border: 1px solid ${theme.buttonColorHover};
     color: ${theme.buttonColorHover};
   }
+  @media (max-width: 768px) {
+    width: 40%;
+    height: 90%;
+    font-size: 14px;
+  }
 `;
 
 export { Button };

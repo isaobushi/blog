@@ -1,12 +1,18 @@
 import React from "react";
-import { CardItem, DateButton, Main, Tags, Title } from "./PostItemStyled";
+import {
+  CardItem,
+  DateButton,
+  Main,
+  ReadTime,
+  Tags,
+  Title,
+} from "./PostItemStyled";
 import { Subtext } from "../General/Typography/Typography";
 import { Link } from "gatsby";
 /**
  * Primary UI component for user interaction
  */
 const PostItem = ({ title, date, tags, slug, dark, post, ...props }) => {
-  console.log("PostItem -> post", post);
   const extimateDurationRead = text => {
     let lengthText = text.split(" ").length;
     let minutes = Math.floor(lengthText / 200);
@@ -31,8 +37,9 @@ const PostItem = ({ title, date, tags, slug, dark, post, ...props }) => {
           ))}
         </Tags>
       </Main>
-      <Subtext variant="accent">{minutes}</Subtext>{" "}
-      <Subtext variant="default">min. read</Subtext>
+      <ReadTime variant="default">
+        <span>{minutes}</span> min. read
+      </ReadTime>
     </CardItem>
   );
 };

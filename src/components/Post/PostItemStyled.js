@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Button } from "../General/Button/Button";
 import * as color from "../../utils/colors";
+import { H2, Subtext } from "../General/Typography/Typography";
 
 const CardItem = styled.div`
   display: flex;
@@ -9,10 +10,8 @@ const CardItem = styled.div`
   padding: 1rem 0;
 `;
 
-const Title = styled.div`
+const Title = styled(H2)`
   width: 100%;
-  font-size: 2rem;
-  font-family: "ヒラギノ丸ゴ Pro W4", sans-serif;
   text-align: left;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
@@ -45,6 +44,14 @@ const Main = styled.div`
   }
 `;
 
+const ReadTime = styled(Subtext)`
+  width: 33%;
+  text-align: right;
+  &::first-letter {
+    color: ${color.accent};
+  }
+`;
+
 const DateButton = styled(Button)`
   cursor: pointer;
   height: 5rem;
@@ -64,12 +71,21 @@ const DateButton = styled(Button)`
       text-transform: capitalize;
       font-weight: 500;
     }
+    @media (max-width: 768px) {
+      height: 90%;
+      font-size: 14px;
+    }
   }
   &:hover > span:last-child {
     font-weight: 100;
     opacity: 1;
     color: ${({ dark }) => (dark ? color.neutral200 : color.neutral500)};
   }
+  @media (max-width: 768px) {
+    width: 4rem;
+    height: 3.5rem;
+    font-size: 14px;
+  }
 `;
 
-export { CardItem, DateButton, Main, Tags, Title };
+export { CardItem, DateButton, Main, ReadTime, Tags, Title };
