@@ -14,7 +14,7 @@ export default ({ location, data }) => {
   const path = location.pathname ? location.pathname : "";
   return (
     <Layout path={path}>
-      <HexSVG />
+      {/* <HexSVG /> */}
       <Item />
       <H2 variant="default">Latest posts</H2>
       <hr style={{ borderColor: dark ? color.accent : color.neutral100 }} />
