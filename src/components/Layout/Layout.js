@@ -23,11 +23,11 @@ const Layout = ({ children, path }) => {
       );
     }
   }, [dark, path]);
-
+  const mode = dark ? { mode: "dark" } : { mode: "light" };
   return (
     <>
       <SEO />
-      <ThemeProvider theme={{ mode: dark ? "dark" : "light" }}>
+      <ThemeProvider theme={mode}>
         <Global dark={dark}>
           <Container>
             <Header path={path}></Header>
