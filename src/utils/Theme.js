@@ -8,7 +8,7 @@ const textColor = theme.variants("mode", "variant", {
   danger: { light: colors.danger, dark: colors.danger },
   warning: { light: colors.warning, dark: colors.warning },
   success: { light: colors.success, dark: colors.success },
-  inverted: { light: colors.textDark, dark: colors.textLight },
+  inverted: { light: colors.neutral200, dark: colors.neutral500 },
 });
 
 const buttonBackground = theme.variants("mode", "variant", {

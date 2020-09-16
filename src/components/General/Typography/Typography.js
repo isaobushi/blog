@@ -6,8 +6,10 @@ const PageTitle = styled.h1`
   font-size: 10rem;
   margin: 0;
   color: ${theme.textColor};
-  text-shadow: 6px 6px 12px rgba(151, 156, 164, 0.25),
-    -12px -12px 16px rgba(255, 255, 255, 0.25);
+  text-shadow: ${({ dark }) =>
+    dark
+      ? ` 6px 6px 12px rgba(151,156,164,0.25), -12px -12px 16px rgba(0, 0, 0, 0.25)`
+      : `6px 6px 12px rgba(88, 99, 117, 0.25), -12px -12px 16px rgba(255,255,255,0.25)`};
   @media (max-width: 768px) {
     font-size: 5rem;
   }
