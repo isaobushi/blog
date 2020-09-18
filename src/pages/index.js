@@ -10,7 +10,6 @@ import { Item } from "../components/Blog/BlogStyled.js";
 
 export default ({ location, data }) => {
   const { dark } = useContext(DarkContext);
-
   const path = location.pathname ? location.pathname : "";
   return (
     <Layout path={path}>

@@ -34,6 +34,7 @@ const Card = styled.div`
   margin-top: 2vh;
   background-color: #f1f3f6;
   transition: all 1s ease-in;
+  height: 30vh;
 `;
 
 const Text = styled.p`
