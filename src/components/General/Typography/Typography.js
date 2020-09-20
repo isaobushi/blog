@@ -14,6 +14,7 @@ const PageTitle = styled.h1`
     font-size: 5rem;
   }
 `;
+
 const H1 = styled.h1`
   font-size: 3rem;
   color: ${theme.textColor};
@@ -24,7 +25,7 @@ const H1 = styled.h1`
 `;
 
 const H2 = styled.h2`
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: ${theme.textColor};
   font-family: "ヒラギノ丸ゴ Pro W4", sans-serif;
   @media (max-width: 768px) {
@@ -37,7 +38,7 @@ const H3 = styled.h3`
   color: ${theme.textColor};
   font-family: "ヒラギノ丸ゴ Pro W4", sans-serif;
   @media (max-width: 768px) {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 `;
 
@@ -51,7 +52,7 @@ const P = styled.p`
 `;
 
 const Subtext = styled.p`
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: ${theme.textColor};
   font-family: "ヒラギノ丸ゴ Pro W4", sans-serif;
   @media (max-width: 768px) {

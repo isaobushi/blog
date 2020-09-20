@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import * as color from "../../utils";
 import { PageTitle } from "../General/Typography/Typography";
 
 const BlogHeader = styled.div`

@@ -1,23 +1,24 @@
 import React from "react";
 import { Avatar, Container, List } from "./NavStyled";
-import { Button } from "../General/Button/Button";
+import { ButtonOnlyIcon } from "../General/Button/Button";
 import { Link } from "gatsby";
 import SvgTwitter from "../../assets/img/twitter.svg";
 import SvgGitHub from "../../assets/img/github.svg";
+import { H3 } from "../General/Typography/Typography";
 
 const Nav = ({ dark }) => (
   <>
     <Container>
       <List>
-        <Button variant="default" as={Link} to="/Blog/" dark={dark}>
+        <H3 variant="default" as={Link} to="/Blog/" dark={dark}>
           Blog
-        </Button>
-        <Button variant="default" as={Link} to="/About" dark={dark}>
+        </H3>
+        <H3 variant="default" as={Link} to="/About" dark={dark}>
           About
-        </Button>
+        </H3>
       </List>
       <List style={{ justifyContent: "flex-end" }}>
-        <Button
+        <ButtonOnlyIcon
           variant="default"
           as="a"
           href="https://twitter.com/MrMele"
@@ -25,9 +26,8 @@ const Nav = ({ dark }) => (
           dark={dark}
         >
           <Avatar src={SvgTwitter} alt="twitter logo" />
-          Twitter
-        </Button>
-        <Button
+        </ButtonOnlyIcon>
+        <ButtonOnlyIcon
           variant="default"
           as="a"
           href="https://github.com/isaobushi"
@@ -36,8 +36,7 @@ const Nav = ({ dark }) => (
         >
           {" "}
           <Avatar src={SvgGitHub} alt="GitHub Logo" />
-          GitHub
-        </Button>
+        </ButtonOnlyIcon>
       </List>
     </Container>
   </>

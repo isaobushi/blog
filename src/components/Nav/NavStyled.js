@@ -17,14 +17,18 @@ const Avatar = styled.img`
       background-color: #ff8300;
     }
   }
-  @media (max-width: 768px) {
-    display: none;
-  }
 `;
 
 const List = styled.div`
   display: flex;
-  width: 50%;
+  width: 10%;
+  justify-content: space-between;
+  a {
+    margin-right: 10px;
+  }
+  a:hover{
+    border-bottom: 1px solid orange;
+  }
   & a:last-child {
     margin-right: 0px;
   }

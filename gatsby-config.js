@@ -13,6 +13,7 @@ module.exports = {
   },
   /* Your site config here */
   plugins: [
+    `gatsby-plugin-mdx`,
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-transformer-remark`,

@@ -1,85 +1,93 @@
-import React, { useRef, useEffect } from "react"
-import { gsap } from "gsap"
-import { MorphSVGPlugin } from "gsap/MorphSVGPlugin.js"
+import React, { useRef, useEffect } from "react";
+import { gsap } from "gsap";
+import { MorphSVGPlugin } from "gsap/MorphSVGPlugin.js";
 
-const SVGLogo = ({path, dark}) => {
-  let bracketStart = useRef(null)
-  let letterA = useRef(null)
-  let usb = useRef(null)
-  let usbCircle = useRef(null)
-  let switchCircle = useRef(null)
-  let switchLine = useRef(null)
-  let letterD = useRef(null)
-  let letterE = useRef(null)
-  let letterAEnd = useRef(null)
-  let lineCode = useRef(null)
-  let bracketEnd = useRef(null)
+const SVGLogo = ({ path, dark }) => {
+  let bracketStart = useRef(null);
+  let letterA = useRef(null);
+  let usb = useRef(null);
+  let usbCircle = useRef(null);
+  let switchCircle = useRef(null);
+  let switchLine = useRef(null);
+  let letterD = useRef(null);
+  let letterE = useRef(null);
+  let letterAEnd = useRef(null);
+  let lineCode = useRef(null);
+  let bracketEnd = useRef(null);
 
   useEffect(() => {
-    if(path === "/"){
-    if (typeof window !== "undefined") gsap.registerPlugin(MorphSVGPlugin)
-    const tl = gsap.timeline({
-      delay: 1,
-      yoyo: true,
-      repeatDelay: .8,
-      repeat: 1
-    })
-    MorphSVGPlugin.convertToPath(usbCircle)
-    {/* prettier-ignore */ }
-    /* eslint-disable */
-      tl.to(
-        letterA, {
+    if (path === "/") {
+      if (typeof window !== "undefined") gsap.registerPlugin(MorphSVGPlugin);
+      const tl = gsap.timeline({
+        delay: 1,
+        yoyo: true,
+        repeatDelay: 0.8,
+        repeat: 1,
+      });
+      MorphSVGPlugin.convertToPath(usbCircle);
+      tl.to(letterA, {
         duration: 0.5,
         morphSVG: bracketStart,
         fill: "#F58F29",
       })
-      .to(
-        letterD,
-        { duration: 0.5, morphSVG: switchCircle, fill: "#6279B8" },
-        "<"
-      )
-      .fromTo(
-        switchLine,
-        { yPercent: -500, opacity: 0, fill: "#4c9f70" },
-        { yPercent: 0, opacity: 1, fill: "#4C9F70" },
-        "<"
-      )
-      .to(
-        letterD,
-        { rotate: -90, transformOrigin: "50% 50%", yPercent: -10 },
-        "+=0.1"
-      )
-      .to(
-        switchLine,
-        {
-          rotate: -90,
-          yPercent: 60,
-          xPercent: -290,
-          transformOrigin: "50% 50%",
-        },
-        "<"
-      )
-      .to(
-        letterE,
-        { duration: 0.5, rotate: 90, transformOrigin: "50% 50%", xPercent: 15 },
-        "<"
-      )
-      .to(
-        letterE,
-        { duration: 0.5, morphSVG: usb, fill: "rgb(213, 108, 242)" },
-        "<"
-      )
-      .to(
-        letterAEnd,
-        { duration: 0.5, morphSVG: bracketEnd, fill: "#E63946", xPercent: 60 },
-        "<"
-      )
-      .fromTo(
-        lineCode,
-        { duration: 0.5, opacity: 0, yPercent: -300, xPercent: 100 },
-        { opacity: 1, yPercent: -5, xPercent: 100 }
-      );}
-  }, [])
+        .to(
+          letterD,
+          { duration: 0.5, morphSVG: switchCircle, fill: "#6279B8" },
+          "<"
+        )
+        .fromTo(
+          switchLine,
+          { yPercent: -500, opacity: 0, fill: "#4c9f70" },
+          { yPercent: 0, opacity: 1, fill: "#4C9F70" },
+          "<"
+        )
+        .to(
+          letterD,
+          { rotate: -90, transformOrigin: "50% 50%", yPercent: -10 },
+          "+=0.1"
+        )
+        .to(
+          switchLine,
+          {
+            rotate: -90,
+            yPercent: 60,
+            xPercent: -290,
+            transformOrigin: "50% 50%",
+          },
+          "<"
+        )
+        .to(
+          letterE,
+          {
+            duration: 0.5,
+            rotate: 90,
+            transformOrigin: "50% 50%",
+            xPercent: 15,
+          },
+          "<"
+        )
+        .to(
+          letterE,
+          { duration: 0.5, morphSVG: usb, fill: "rgb(213, 108, 242)" },
+          "<"
+        )
+        .to(
+          letterAEnd,
+          {
+            duration: 0.5,
+            morphSVG: bracketEnd,
+            fill: "#E63946",
+            xPercent: 60,
+          },
+          "<"
+        )
+        .fromTo(
+          lineCode,
+          { duration: 0.5, opacity: 0, yPercent: -300, xPercent: 100 },
+          { opacity: 1, yPercent: -5, xPercent: 100 }
+        );
+    }
+  }, [path]);
 
   return (
     <svg
@@ -214,6 +222,6 @@ const SVGLogo = ({path, dark}) => {
       </g>
     </svg>
   );
-}
+};
 
-export { SVGLogo }
+export { SVGLogo };

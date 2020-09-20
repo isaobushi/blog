@@ -57,21 +57,7 @@ const HexSVG = ({ path, dark }) => {
       Hex15,
     ];
     if (typeof window !== "undefined") gsap.registerPlugin(DrawSVGPlugin);
-    tl.fromTo(
-      hexes,{}, {}
-      // { drawSVG: "0%", duration: 2 },
-      // {
-      //   drawSVG: "100%",
-      //   duration: 2,
-      //   stagger: {
-      //     grid: [0, 15],
-      //     from: "end",
-      //     ease: "power2.in",
-      //     amount: 1.5,
-      //   },
-      // }
-    )
-    .fromTo(hexes, { drawSVG: "100%",duration:.4 }, { stagger: .1,drawSVG: "0%",duration:.4, stroke: "rgb(94, 101, 114)", strokeWidth: 1 });
+    tl.fromTo(hexes, { drawSVG: "100%",duration:.4 }, { stagger: .1,drawSVG: "0%",duration:.4, stroke: "rgb(94, 101, 114)", strokeWidth: 1 });
     gsap.fromTo(
       [
         shadow1,

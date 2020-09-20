@@ -14,7 +14,7 @@ const Global = styled.div`
 const Container = styled.div`
   min-height: calc(100vh - 199px);
   width: 100%;
-  max-width: 1024px;
+  max-width: 675px;
   padding-top: 10px;
 `;
 

@@ -206,6 +206,11 @@ p {
   left: 58%;
   top: 1%;
 }
+@media (max-width: 768px) {
+  #Hex {
+    display: none;
+  }
+}
 
 #hex-1,
 #hex-2,
