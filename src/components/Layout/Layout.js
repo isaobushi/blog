@@ -16,7 +16,7 @@ const Layout = ({ children, path }) => {
   return (
     <>
       <SEO />
-      <ThemeProvider theme={{ mode: dark ? "dark" : "light" }}>
+      <ThemeProvider theme={mode}>
         <Global dark={dark}>
           <Container>
             <Header path={path}></Header>
