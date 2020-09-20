@@ -44,6 +44,7 @@ const Main = styled.div`
 
 const ReadMore = styled.div`
   span {
+    text-shadow: 1px 1px 10px orange, 1px -2px 3px white;
     opacity: 0;
   }
 `;
