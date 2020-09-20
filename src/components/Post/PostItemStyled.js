@@ -1,12 +1,11 @@
 import styled from "styled-components";
-import { Button } from "../General/Button/Button";
 import * as color from "../../utils/colors";
 import { H2, Subtext } from "../General/Typography/Typography";
 
 const CardItem = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center !important;
   padding: 1rem 0;
 `;
 
@@ -16,76 +15,47 @@ const Title = styled(H2)`
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   padding: 4px 0;
+  padding-top: 4px;
+`;
+
+const Tag = styled(Subtext)`
+  width: fit-content;
   &:hover {
-    border-bottom: 1px solid ${color.accent};
-  }
-`;
-
-const Tags = styled.div`
-  display: flex;
-  align-items: center;
-  margin-top: 12px;
-`;
-
-const Main = styled.div`
-  width: 80%;
-  padding: 0.5rem 1.5rem;
-  & p {
-    &:hover {
-      cursor: pointer;
-      color: ${color.accent};
-    }
-    &::after {
-      content: ",";
-    }
-    &:last-child::after {
-      content: "";
-    }
-  }
-`;
-
-const ReadTime = styled(Subtext)`
-  width: 33%;
-  text-align: right;
-  &::first-letter {
+    cursor: pointer;
     color: ${color.accent};
   }
 `;
 
-const DateButton = styled(Button)`
-  cursor: pointer;
-  height: 5rem;
-  width: 5rem;
+const Main = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 0;
-  span {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    height: 1.5rem;
-    font-size: 1.2rem;
-    line-height: 1.5rem;
-    color: ${({ dark }) => (dark ? color.neutral200 : color.neutral500)};
-    &:last-child {
-      opacity: 0.5;
-      text-transform: capitalize;
-      font-weight: 500;
-    }
-    @media (max-width: 768px) {
-      height: 90%;
-      font-size: 14px;
-    }
+  align-content: space-between;
+  justify-content: space-between;
+  width: 100%;
+  & > * {
+    margin: 0 1rem;
   }
-  &:hover > span:last-child {
-    font-weight: 100;
-    opacity: 1;
-    color: ${({ dark }) => (dark ? color.neutral200 : color.neutral500)};
-  }
+
   @media (max-width: 768px) {
-    width: 4rem;
-    height: 3.5rem;
-    font-size: 14px;
+    font-size: 12px;
+    width: 100%;
   }
 `;
 
-export { CardItem, DateButton, Main, ReadTime, Tags, Title };
+const ReadMore = styled.div`
+  span {
+    opacity: 0;
+  }
+`;
+const ReadTime = styled.div`
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8rem;
+  span:first-child {
+    color: ${color.accent};
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+`;
+
+export { CardItem, Main, ReadMore, ReadTime, Tag, Title };

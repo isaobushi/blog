@@ -1,5 +1,6 @@
 ---
-title: "MY FIRST POST"
+title: "My First Post"
+sub: "This is a subtitle"
 date: "07.09.2020"
 tags: "Gatsby, First"
 ---

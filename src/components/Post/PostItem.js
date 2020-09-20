@@ -1,18 +1,37 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   CardItem,
-  DateButton,
   Main,
+  ReadMore,
   ReadTime,
-  Tags,
+  Tag,
   Title,
 } from "./PostItemStyled";
-import { Subtext } from "../General/Typography/Typography";
 import { Link } from "gatsby";
-/**
- * Primary UI component for user interaction
- */
-const PostItem = ({ title, date, tags, slug, dark, post, ...props }) => {
+import { ButtonSquarred } from "../General/Button/Button";
+import gsap from "gsap/gsap-core";
+
+const PostItem = ({ title, date, tag, slug, dark, post, ...props }) => {
+  const [aniamtionArrows, setAnimationArrows] = useState();
+  let arrow1 = useRef(null);
+  let arrow2 = useRef(null);
+  let arrow3 = useRef(null);
+
+  useEffect(() => {
+    const tl = gsap.timeline({ pause: true });
+    setAnimationArrows(
+      tl
+        .to([arrow1, arrow2, arrow3], {
+          duration: 0.5,
+          stagger: 0.1,
+          scale: 3,
+          color: "orange",
+          opacity: 1,
+        })
+        .pause()
+    );
+  }, []);
+
   const extimateDurationRead = text => {
     let lengthText = text.split(" ").length;
     let minutes = Math.floor(lengthText / 200);
@@ -21,25 +40,59 @@ const PostItem = ({ title, date, tags, slug, dark, post, ...props }) => {
   let minutes = extimateDurationRead(post);
   return (
     <CardItem>
-      <DateButton variant="default" dark={dark}>
+      <ButtonSquarred variant="default" dark={dark}>
         <span>24</span>
         <span>NOV</span>
-      </DateButton>
+      </ButtonSquarred>
       <Main>
-        <Title as={Link} to={`${slug}`} dark={dark}>
+        <Title
+          as={Link}
+          to={`${slug}`}
+          dark={dark}
+          onMouseEnter={() => setAnimationArrows(aniamtionArrows.play())}
+          onMouseLeave={() => setAnimationArrows(aniamtionArrows.reverse(0))}
+        >
           {title}
         </Title>
-        <Tags>
-          {tags.map((tag, i) => (
-            <Subtext key={tag + i} variant="default">
-              {tag}
-            </Subtext>
-          ))}
-        </Tags>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "baseline",
+            justifyContent: "start",
+            gap: 10,
+          }}
+        >
+          <Tag>{tag}</Tag>
+          <ReadTime variant="default">
+            <span>{minutes}</span> <span>min. read</span>
+          </ReadTime>
+        </div>
       </Main>
-      <ReadTime variant="default">
-        <span>{minutes}</span> min. read
-      </ReadTime>
+      <ReadMore>
+        <div>
+          <span
+            ref={el => {
+              arrow1 = el;
+            }}
+          >
+            {">"}
+          </span>
+          <span
+            ref={el => {
+              arrow2 = el;
+            }}
+          >
+            {">"}
+          </span>
+          <span
+            ref={el => {
+              arrow3 = el;
+            }}
+          >
+            {">"}
+          </span>
+        </div>
+      </ReadMore>
     </CardItem>
   );
 };

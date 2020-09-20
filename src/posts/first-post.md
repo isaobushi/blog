@@ -1,6 +1,8 @@
 ---
-title: "HI. THIS IS A LONGER POST TITLE"
-date: "07.09.2021"
+title: "This is a Long Post"
+sub: "This is a subtitle"
+date: "19 Sep. '20"
+min: "4"
 tags: "Gatsby, First, Gatsby, First, Gatsby, First, Gatsby, First"
 featuredImage: "../assets/post-images/colorcloud.jpg"
 ---

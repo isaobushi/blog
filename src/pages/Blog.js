@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout/Layout";
-import PostItem from "../components/Post/PostItem";
 import {
   BlogHeader,
   ListTags,
@@ -32,18 +31,16 @@ export default Blog;
 
 export const query = graphql`
   {
-    allMarkdownRemark {
+    allMdx {
       nodes {
         frontmatter {
           title
-          date
           tags
+          sub
+          date
         }
-        excerpt
-        html
-        fields {
-          slug
-        }
+        timeToRead
+        tableOfContents
       }
     }
   }
