@@ -10,7 +10,6 @@ import {
 import { DarkContext } from "../context/DarkContext";
 
 const Blog = ({ location, data }) => {
-  console.log("Blog -> data", data);
   const { dark } = useContext(DarkContext);
   const path = location.pathname ? location.pathname : "";
 

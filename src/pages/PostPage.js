@@ -4,7 +4,6 @@ import Post from "../components/Post/Post";
 import Layout from "../components/Layout/Layout";
 
 const PostPage = ({ data }) => {
-  console.log(data);
   return (
     <Layout>
       <Post data={data} />

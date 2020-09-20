@@ -14,7 +14,7 @@ const PostTitle = styled.h1`
   width: 100%;
   background-color: #ffa50047;
 `;
-const PostArticle = styled.p`
+const PostArticle = styled.div`
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   line-height: 2.5rem;

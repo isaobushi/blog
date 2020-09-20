@@ -13,6 +13,8 @@ const Layout = ({ children, path }) => {
     "%cHey stranger, what's up ? :)",
     "background: red; font-size: 48px; color:white;"
   );
+
+  const mode = dark ? { mode: "dark" } : { mode: "light" };
   return (
     <>
       <SEO />

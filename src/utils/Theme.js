@@ -48,4 +48,16 @@ const buttonColorHover = theme.variants("mode", "variant", {
   success: { light: colors.success, dark: colors.success },
 });
 
-export { buttonBackground, buttonColorHover, buttonBoxShadow, textColor };
+const postCardBgColor = theme.variants("mode", "variant", {
+  warning: { light: colors.warning, dark: colors.warning },
+  danger: { light: colors.danger, dark: colors.danger },
+  success: { light: colors.success, dark: colors.success },
+});
+
+export {
+  buttonBackground,
+  buttonColorHover,
+  buttonBoxShadow,
+  postCardBgColor,
+  textColor,
+};
