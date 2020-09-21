@@ -1,13 +1,32 @@
 import React from "react";
-import { PostArticle, PostContainer, PostTitle } from "./PostStyled";
+import {
+  DateText,
+  PostArticle,
+  PostContainer,
+  PostSubTitle,
+  PostTitle,
+  TimeToRead,
+} from "./PostStyled";
 import { MDXRenderer } from "gatsby-plugin-mdx";
-// import Img from "gatsby-image";
 
-const Post = ({ data, img }) => {
+const Post = ({ data }) => {
+  const {
+    mdx: {
+      timeToRead,
+      frontmatter: { title, sub, date },
+    },
+  } = data;
+
   return (
     <PostContainer>
-      <PostTitle>{data.mdx.frontmatter.title}</PostTitle>
-      <div>{data.mdx.frontmatter.sub}</div>
+      <PostTitle>{title}</PostTitle>
+      <PostSubTitle>{sub}</PostSubTitle>
+      <div>
+        <DateText>{date}</DateText>
+        {" - "}
+        <TimeToRead variant="accent">{timeToRead}</TimeToRead>
+        <TimeToRead>{" min. read"}</TimeToRead>
+      </div>
       <PostArticle>
         <MDXRenderer>{data.mdx.body}</MDXRenderer>
       </PostArticle>

@@ -29,7 +29,8 @@ const H2 = styled.h2`
   color: ${theme.textColor};
   font-family: "ヒラギノ丸ゴ Pro W4", sans-serif;
   @media (max-width: 768px) {
-    font-size: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
   }
 `;
 
@@ -43,9 +44,10 @@ const H3 = styled.h3`
 `;
 
 const P = styled.p`
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: ${theme.textColor};
   font-family: "ヒラギノ丸ゴ Pro W4", sans-serif;
+  padding-bottom: 1rem;
   @media (max-width: 768px) {
     font-size: 1rem;
   }

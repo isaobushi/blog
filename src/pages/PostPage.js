@@ -19,7 +19,7 @@ export const query = graphql`
       frontmatter {
         date
         sub
-        tags
+        topic
         title
       }
       body

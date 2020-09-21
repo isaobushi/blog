@@ -14,6 +14,7 @@ const PostCardContainer = styled.div`
   padding: 1rem 3rem;
   line-height: 1.5rem;
   transition: all 0.3s ease-in-out;
+  margin: 1.5rem 0;
   p,
   h1,
   h2,

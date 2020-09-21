@@ -11,42 +11,34 @@ module.exports = {
     keywords: "blog, gatsby, react, pwa",
     url: "https://www.isao.io",
   },
-  /* Your site config here */
   plugins: [
-    `gatsby-plugin-mdx`,
-    `gatsby-plugin-styled-components`,
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              wrapperStyle:
-                "border-radius: 5px; max-width: 100%; margin: 5rem 0;",
-            },
-          },
-          {
-            resolve: `gatsby-remark-vscode`,
-            options: {
-              theme: "Default Dark+",
-              inlineCode: {
-                marker: "•",
-                theme: {
-                  default: "Default Light+",
-                  dark: "Default Dark+",
-                },
-              },
-            },
-          },
-        ],
+        name: `images`,
+        path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-offline`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-remark-images`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 675,
+            },
+          },
+        ],
+        plugins: [`gatsby-remark-images`],
+      },
+    },
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-offline`,
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
@@ -71,12 +63,7 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/assets/post-images`,
-      },
-    },
+    `gatsby-plugin-smoothscroll`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
