@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ContainerAnchor, CopySvg, LinkTitle } from "./AnchorLinkStyled";
 
 const AnchorLink = ({ hash, children }) => {
   const [isCopied, setIsCopied] = useState(false);
-  const url = typeof window !== undefined ? window.location.href : "";
+  const [url, setUrl] = useState("");
+
+  useEffect(() => {
+    typeof window !== undefined ? setUrl(window.location.href) : "";
+  }, []);
+
   const handleCopy = () => {
     console.log("copied");
     navigator.clipboard.writeText(`${url}/#${hash}`);
