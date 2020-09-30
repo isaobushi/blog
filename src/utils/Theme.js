@@ -49,9 +49,10 @@ const buttonColorHover = theme.variants("mode", "variant", {
 });
 
 const postCardBgColor = theme.variants("mode", "variant", {
-  warning: { light: colors.warning, dark: colors.warning },
-  danger: { light: colors.danger, dark: colors.danger },
-  success: { light: colors.success, dark: colors.success },
+  info: { light: colors.bgInfoCard, dark: colors.bgInfoCard },
+  warning: { light: colors.bgWarningCard, dark: colors.bgWarningCard },
+  danger: { light: colors.bgDangerCard, dark: colors.bgDangerCard },
+  success: { light: colors.bgSuccessCard, dark: colors.bgSuccessCard },
 });
 
 export {

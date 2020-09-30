@@ -86,6 +86,7 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+
 html,
 body {
   height: 100%;
@@ -93,8 +94,17 @@ body {
   padding: 0;
   overflow-x: hidden;
   overscroll-behavior: contain;
+  font-size: 16px;
 }
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  text-rendering: optimizelegibility;
+}
 a {
   text-decoration: none;
   color: inherit;

@@ -7,9 +7,17 @@ const accent = "#FF8300";
 const success = "#529E66";
 const danger = "#D0454C";
 const warning = "#E1C542";
+const bgInfoCard = "#dfebf6";
+const bgDangerCard = "#f6dfdf";
+const bgWarningCard = "#f2d7b4";
+const bgSuccessCard = "#b9f2b4";
 
 export {
   neutral100,
+  bgInfoCard,
+  bgDangerCard,
+  bgWarningCard,
+  bgSuccessCard,
   neutral200,
   neutral500,
   textLight,

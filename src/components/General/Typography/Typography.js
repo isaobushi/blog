@@ -28,6 +28,7 @@ const H2 = styled.h2`
   font-size: 1.5rem;
   color: ${theme.textColor};
   font-family: "ヒラギノ丸ゴ Pro W4", sans-serif;
+  margin-bottom: 4px;
   @media (max-width: 768px) {
     font-size: 1.3rem;
     font-weight: 600;
@@ -48,6 +49,7 @@ const P = styled.p`
   color: ${theme.textColor};
   font-family: "ヒラギノ丸ゴ Pro W4", sans-serif;
   padding-bottom: 1rem;
+  font-weight: 400;
   @media (max-width: 768px) {
     font-size: 1rem;
   }
@@ -56,7 +58,8 @@ const P = styled.p`
 const Subtext = styled.p`
   font-size: 0.8rem;
   color: ${theme.textColor};
-  font-family: "ヒラギノ丸ゴ Pro W4", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
   @media (max-width: 768px) {
     font-size: 0.8em;
   }

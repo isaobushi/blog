@@ -6,7 +6,7 @@ const AnchorLink = ({ hash, children }) => {
   const [url, setUrl] = useState("");
 
   useEffect(() => {
-    typeof window !== undefined ? setUrl(window.location.href) : "";
+    typeof window !== undefined ? setUrl(window.location.href) : setUrl("");
   }, []);
 
   const handleCopy = () => {

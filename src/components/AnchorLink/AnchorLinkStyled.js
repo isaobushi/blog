@@ -16,10 +16,12 @@ const ContainerAnchor = styled.div`
     transform: translateX(-1.3rem);
   }
 `;
+
 const LinkTitle = styled(H2)`
   font-weight: 500;
   margin-left: 0.5rem;
 `;
+
 const CopySvg = styled.div`
   transition: all 0.5s ease-in-out;
   opacity: 0;

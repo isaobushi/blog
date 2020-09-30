@@ -6,6 +6,7 @@ const PostContainer = styled.div`
   flex-direction: column;
   align-content: center;
   flex-wrap: wrap;
+  padding-top: 24px;
 `;
 const PostTitle = styled.h1`
   font-family: "Roboto", sans-serif;
@@ -16,6 +17,7 @@ const PostTitle = styled.h1`
   width: 100%;
   background-color: #ffa50047;
   margin-bottom: 0;
+  color: #4f4d4d;
 `;
 const PostSubTitle = styled(H2)`
   padding: 1rem 0 0.5rem 0;

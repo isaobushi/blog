@@ -12,4 +12,5 @@ export const GlobalStyle = createGlobalStyle`
     font-family: "ヒラギノ丸ゴ Pro W4", sans-serif;
 
   }
+
 `;
