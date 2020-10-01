@@ -10,18 +10,18 @@ const AnchorLink = ({ hash, children }) => {
   }, []);
 
   const handleCopy = () => {
-    console.log("copied");
     navigator.clipboard.writeText(`${url}/#${hash}`);
     setIsCopied(true);
-    setTimeout(() => {
-      setIsCopied(false);
-    }, 700);
   };
   return (
     <>
       <ContainerAnchor>
         <CopySvg as="a">
-          <svg viewBox="0 0 469.898 469.898" onClick={() => handleCopy()}>
+          <svg
+            viewBox="0 0 469.898 469.898"
+            onClick={() => handleCopy()}
+            onMouseLeave={() => setIsCopied(false)}
+          >
             <def>
               <filter id="shadow">
                 <feDropShadow

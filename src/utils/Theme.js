@@ -1,5 +1,6 @@
 import theme from "styled-theming";
 import * as colors from "./colors";
+import * as shadow from "./shadows";
 
 const textColor = theme.variants("mode", "variant", {
   default: { light: colors.textLight, dark: colors.textDark },
@@ -49,10 +50,19 @@ const buttonColorHover = theme.variants("mode", "variant", {
 });
 
 const postCardBgColor = theme.variants("mode", "variant", {
+  default: { light: colors.neutral200, dark: colors.neutral500 },
   info: { light: colors.bgInfoCard, dark: colors.bgInfoCard },
   warning: { light: colors.bgWarningCard, dark: colors.bgWarningCard },
   danger: { light: colors.bgDangerCard, dark: colors.bgDangerCard },
   success: { light: colors.bgSuccessCard, dark: colors.bgSuccessCard },
+});
+
+const postCardBoxShadow = theme.variants("mode", "variant", {
+  default: { light: shadow.shadowInnerLight, dark: shadow.shadowInnerDark },
+  info: { light: shadow.shadowInnerLight, dark: shadow.shadowInnerDark },
+  warning: { light: shadow.shadowInnerLight, dark: shadow.shadowInnerDark },
+  danger: { light: shadow.shadowInnerLight, dark: shadow.shadowInnerDark },
+  success: { light: shadow.shadowInnerLight, dark: shadow.shadowInnerDark },
 });
 
 export {
@@ -61,4 +71,5 @@ export {
   buttonBoxShadow,
   postCardBgColor,
   textColor,
+  postCardBoxShadow,
 };

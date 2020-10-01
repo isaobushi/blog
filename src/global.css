@@ -96,6 +96,7 @@ body {
   overscroll-behavior: contain;
   font-size: 16px;
 }
+
 h1,
 h2,
 h3,
@@ -105,14 +106,17 @@ h6,
 p {
   text-rendering: optimizelegibility;
 }
+
 a {
   text-decoration: none;
   color: inherit;
 }
+
 ol,
 ul {
   list-style: none;
 }
+
 a:hover {
   color: inherit;
 }
@@ -131,6 +135,7 @@ p {
   margin-right: 8px;
   cursor: pointer;
 }
+
 #layer_1 {
   transform: scale(2);
 }
@@ -170,9 +175,11 @@ p {
 #Layer_darkm_mode {
   cursor: pointer;
 }
+
 #moon-main {
   opacity: 0;
 }
+
 #ray-big-n,
 #ray-big-ne,
 #ray-big-e,
@@ -216,6 +223,7 @@ p {
   left: 58%;
   top: 1%;
 }
+
 @media (max-width: 768px) {
   #Hex {
     display: none;
@@ -236,4 +244,11 @@ p {
 .span-japanese {
   color: orange;
   text-shadow: 1px 1px 10px orangered;
+}
+
+pre {
+  scrollbar-width: inherit;
+  scrollbar-color: #5e6572 transparent;
+  background-color: rgb(18, 45, 66) !important;
+
 }

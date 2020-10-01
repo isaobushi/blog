@@ -1,18 +1,19 @@
 import styled from "styled-components";
 import * as theme from "../../../utils/Theme";
-// import * as color from "../../../utils";
+import { Subtext } from "../../General/Typography/Typography";
+import * as color from "../../../utils";
 
 const PostCardContainer = styled.div`
   width: 100%;
-  min-height: 3rem;
   position: relative;
+  height: 1px;
   background-color: ${theme.postCardBgColor};
   border-radius: 5px;
-  transition: all 0.7s ease-in-out;
-  box-shadow: rgb(209, 217, 230) inset 12px 12px 10px,
-    rgb(255, 255, 255) inset -12px -12px 16px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: ${theme.postCardBoxShadow};
   padding: 1rem 3rem;
   line-height: 1.5rem;
+  opacity: 0;
   margin: 1.5rem 0;
   z-index: 2;
 
@@ -21,10 +22,11 @@ const PostCardContainer = styled.div`
   h2,
   h3,
   h4 {
-    font-family: "ヒラギノ丸ゴ Pro W4", sans-serif;
+    font-family: "Roboto", sans-serif;
+    color: #5e6572;
   }
   h2 {
-    font-weight: 500;
+    font-weight: lighter;
   }
 `;
 
@@ -32,7 +34,8 @@ const Slider = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #f1f3f6;
+  background-color: ${({ isDark }) =>
+    isDark ? color.neutral500 : color.neutral200};
   top: 0;
   left: 0;
   transition: all 0.8s ease-in-out;
@@ -41,34 +44,39 @@ const Slider = styled.div`
   justify-content: center;
   align-content: center;
 `;
-const Circle = styled.div`
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  top: -20px;
-  left: -20px;
-  background-color: #f1f3f6;
-  border: 7px solid #f1f3f6;
-  display: none;
-  svg {
-    fill: #7979ec;
-  }
-`;
 
 const HiddenCard = styled.div`
   width: 95%;
-  height: 100%;
+  height: 0%;
   position: absolute;
   top: 0;
-  left: 20px;
+  left: 2.5%;
   opacity: 1;
-  background-color: #31417b;
+  background-color: #000;
   border-radius: 5px;
   z-index: 1;
-  padding: 1rem;
-  padding-top: 1rem;
   color: white;
   margin: 0 auto;
 `;
-export { Circle, PostCardContainer, Slider, HiddenCard };
+
+const ToogleCode = styled(Subtext)`
+  text-align: right;
+  align-content: center;
+  display: flex;
+  justify-content: flex-end;
+  font-family: "Robot0", sans-serif;
+  line-height: 2rem;
+  font-weight: 500;
+  font-size: 0.6rem;
+  svg {
+    cursor: pointer;
+    margin-left: 0.6rem;
+    height: 2rem;
+    width: 2rem;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+`;
+export { HiddenCard, PostCardContainer, Slider, ToogleCode };

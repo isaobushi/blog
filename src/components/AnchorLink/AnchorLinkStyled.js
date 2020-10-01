@@ -37,12 +37,15 @@ const CopySvg = styled.div`
     top: -50px;
     left: -50px;
     border: 1px solid #ff8300;
-    padding: 1px 2px;
+    padding: 1px 4px;
     text-align: center;
     color: #ff8300;
     border-radius: 5px;
     position: absolute;
     font-size: 0.8rem;
+    &:visited {
+      color: orange;
+    }
   }
   @media (max-width: 768px) {
     opacity: 1;

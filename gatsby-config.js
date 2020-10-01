@@ -9,7 +9,7 @@ module.exports = {
     title: "AM",
     description: "This is my tech blog",
     keywords: "blog, gatsby, react, pwa",
-    url: "https://www.isao.io",
+    url: "https://www.andreamele.com",
   },
   plugins: [
     {
