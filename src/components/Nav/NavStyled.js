@@ -11,7 +11,7 @@ const ListItem = styled(Button)``;
 const Avatar = styled.img`
   width: 2rem;
   height: 2rem;
-  padding: 0px 4px;
+  padding: 6px;
   &:hover {
     svg {
       background-color: #ff8300;
@@ -26,7 +26,7 @@ const List = styled.div`
   a {
     margin-right: 10px;
   }
-  a:hover{
+  a:hover {
     border-bottom: 1px solid orange;
   }
   & a:last-child {

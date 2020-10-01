@@ -66,7 +66,7 @@ const PostCard = ({ variant, children, code }) => {
         borderLeft: `3px solid ${theme.buttonBackground}`,
         boxShadow: theme.postCardBoxShadow,
       });
-  }, []);
+  }, [dark]);
 
   return (
     <div

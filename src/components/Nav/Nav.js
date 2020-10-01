@@ -2,8 +2,8 @@ import React from "react";
 import { Avatar, Container, List } from "./NavStyled";
 import { ButtonOnlyIcon } from "../General/Button/Button";
 import { Link } from "gatsby";
-import SvgTwitter from "../../assets/img/twitter.svg";
-import SvgGitHub from "../../assets/img/github.svg";
+import SvgTwitter from "../../assets/img/twitter-cool.svg";
+import SvgGitHub from "../../assets/img/github-logo-face.svg";
 import { H3 } from "../General/Typography/Typography";
 
 const Nav = ({ dark }) => (
@@ -19,7 +19,7 @@ const Nav = ({ dark }) => (
       </List>
       <List style={{ justifyContent: "flex-end" }}>
         <ButtonOnlyIcon
-          variant="default"
+          variant="icon"
           as="a"
           href="https://twitter.com/MrMele"
           target="blank"
@@ -28,7 +28,7 @@ const Nav = ({ dark }) => (
           <Avatar src={SvgTwitter} alt="twitter logo" />
         </ButtonOnlyIcon>
         <ButtonOnlyIcon
-          variant="default"
+          variant="icon"
           as="a"
           href="https://github.com/isaobushi"
           target="blank"

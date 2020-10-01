@@ -6,7 +6,7 @@ import * as color from "../../../utils";
 const PostCardContainer = styled.div`
   width: 100%;
   position: relative;
-  height: 1px;
+  height: 100%;
   background-color: ${theme.postCardBgColor};
   border-radius: 5px;
   transition: all 0.3s ease-in-out;

@@ -19,10 +19,10 @@ const Layout = ({ children, path }) => {
     <>
       <SEO />
       <ThemeProvider theme={mode}>
-        <Global dark={dark}>
+        <Global dark={false}>
           <Container>
             <Header path={path}></Header>
-            <Nav variant="primary" dark={dark} />
+            <Nav variant="primary" dark={false} />
             {children}
           </Container>
           <Footer />

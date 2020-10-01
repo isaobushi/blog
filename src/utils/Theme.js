@@ -40,6 +40,11 @@ const buttonBoxShadow = theme.variants("mode", "variant", {
       "6px 6px 12px rgba(13, 167, 28, 0.25), -12px -12px 16px rgba(255, 255, 255, 0.25);",
     dark: "18px 18px 20px #24262B, -8px -8px 20px #30343A",
   },
+  icon: {
+    light:
+      "rgb(209, 217, 230) 12px 12px 20px, rgb(255, 255, 255) -12px -12px 16px",
+    dark: "18px 18px 20px #24262B, -8px -8px 20px #30343A",
+  },
 });
 
 const buttonColorHover = theme.variants("mode", "variant", {
@@ -47,6 +52,7 @@ const buttonColorHover = theme.variants("mode", "variant", {
   warning: { light: colors.warning, dark: colors.warning },
   danger: { light: colors.danger, dark: colors.danger },
   success: { light: colors.success, dark: colors.success },
+  icon: { light: colors.accent, dark: colors.accent },
 });
 
 const postCardBgColor = theme.variants("mode", "variant", {
