@@ -6,6 +6,7 @@ const ContainerAnchor = styled.div`
   width: max-content;
   transition: all 0.3s ease-in-out;
   transform: translateX(-2rem);
+  padding-top: 3rem;
   &:hover {
     a {
       opacity: 1;

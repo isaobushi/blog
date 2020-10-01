@@ -11,6 +11,8 @@ import { PostCard } from "../../components/Post/PostCard/PostCard.js";
 import { Button } from "../../components/General/Button/Button.js";
 import { RegVideo, Video } from "../../components/Video/Video.js";
 import { AnchorLink } from "../../components/AnchorLink/AnchorLink.js";
+import { CodeCard } from "../../components/Post/CodeCard/CodeCard.js";
+import { exampleCode } from "./snippets.js";
 import Image from "./images/colorcloud.jpg";
 
 <P>
@@ -58,7 +60,7 @@ import Image from "./images/colorcloud.jpg";
   sollicitudin aliquam. Et malesuada fames ac turpis egestas sed tempus.
 </P>
 
-<PostCard variant={"danger"}>
+<PostCard variant={"default"} code={exampleCode}>
   {" "}
   <H2 id="title"> Title </H2>
   <p>
@@ -71,6 +73,8 @@ import Image from "./images/colorcloud.jpg";
 
 </PostCard>
 
+
+<CodeCard code={exampleCode} opacity={1} />
 
 <AnchorLink hash="SuperTitle">This is the super title</AnchorLink>
 

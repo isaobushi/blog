@@ -1,7 +1,7 @@
 export const shadowLightNeutral = `
 rgb(209, 217, 230) inset 0px 0px 0px,
 rgb(255, 255, 255) inset 0px 0px 0px,
-rgb(209, 217, 230) 12px 12px 20px,
+rgb(209, 217, 230, 0.25) 12px 12px 20px,
 rgb(255, 255, 255) -12px -12px 16px`;
 
 export const shadowDarkNeutral = `

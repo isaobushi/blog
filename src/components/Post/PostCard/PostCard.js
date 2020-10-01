@@ -13,7 +13,7 @@ import * as theme from "../../../utils/Theme";
 import { CodeCard } from "../CodeCard/CodeCard.js";
 import * as shadow from "../../../utils/shadows";
 
-const PostCard = ({ variant, children }) => {
+const PostCard = ({ variant, children, code }) => {
   const { dark } = useContext(DarkContext);
   const [isDown, setIsDown] = useState(false);
   const opacity = isDown ? 1 : 0;
@@ -80,7 +80,7 @@ const PostCard = ({ variant, children }) => {
           curtain = e;
         }}
       >
-        <CodeCard opacity={opacity} />
+        <CodeCard opacity={opacity} code={code} />
       </HiddenCard>
       <PostCardContainer variant={variant} ref={e => (trigger = e)}>
         {children}
