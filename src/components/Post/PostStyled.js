@@ -11,7 +11,8 @@ const PostContainer = styled.div`
 `;
 
 const PostTitle = styled(H1)`
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
   padding: 0.5rem 0;
   border-radius: 5px;
   padding-left: 0.25rem;

@@ -47,7 +47,7 @@ const H3 = styled.h3`
 const P = styled.p`
   font-size: 1rem;
   color: ${theme.textColor};
-  font-family: "ヒラギノ丸ゴ Pro W4", sans-serif;
+  font-family: "Montserrat", sans-serif;
   padding-bottom: 1rem;
   font-weight: 400;
   @media (max-width: 768px) {
