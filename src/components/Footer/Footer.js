@@ -1,7 +1,7 @@
-import React from "react"
-import { FooterContainer, TextFooter } from "./FooterStyled"
+import React from "react";
+import { FooterContainer, TextFooter } from "./FooterStyled";
 
-const Footer = () => (
+export const Footer = () => (
   <>
     <FooterContainer>
       <hr />
@@ -14,5 +14,3 @@ const Footer = () => (
     </FooterContainer>
   </>
 );
-
-export default Footer

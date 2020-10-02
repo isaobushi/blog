@@ -34,4 +34,4 @@ const Post = ({ data }) => {
   );
 };
 
-export default Post;
+export { Post };

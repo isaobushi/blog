@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { H2, Subtext } from "../General/Typography/Typography";
+import { H1, H2, Subtext } from "../General/Typography/Typography";
+
 const PostContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -8,9 +9,9 @@ const PostContainer = styled.div`
   flex-wrap: wrap;
   padding-top: 24px;
 `;
-const PostTitle = styled.h1`
+
+const PostTitle = styled(H1)`
   font-family: "Roboto", sans-serif;
-  font-size: 3rem;
   padding: 0.5rem 0;
   border-radius: 5px;
   padding-left: 0.25rem;
@@ -19,25 +20,30 @@ const PostTitle = styled.h1`
   margin-bottom: 2rem;
   color: white;
 `;
+
 const PostSubTitle = styled(H2)`
   padding: 1rem 0 0.5rem 0;
 `;
+
 const DateText = styled(Subtext)`
   display: inline;
   width: fit-content;
 `;
+
 const TimeToRead = styled(Subtext)`
   display: inline;
   width: fit-content;
 `;
+
 const PostArticle = styled.article`
   font-family: "Montserrat", sans-serif;
   line-height: 2rem;
   width: 100%;
-  max-width: 675px;
+  /* max-width: 675px; */
   align-self: center;
   padding-top: 3rem;
 `;
+
 export {
   DateText,
   PostArticle,

@@ -6,7 +6,7 @@ import SvgTwitter from "../../assets/img/twitter-cool.svg";
 import SvgGitHub from "../../assets/img/github-logo-face.svg";
 import { H3 } from "../General/Typography/Typography";
 
-const Nav = ({ dark }) => (
+export const Nav = ({ dark }) => (
   <>
     <Container>
       <List>
@@ -41,5 +41,3 @@ const Nav = ({ dark }) => (
     </Container>
   </>
 );
-
-export default Nav;

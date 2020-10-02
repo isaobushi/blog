@@ -3,7 +3,6 @@ import styled from "styled-components";
 const Global = styled.div`
   display: flex;
   height: 100%;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: ${({ dark }) => (dark ? "#2A2D32" : "#f1f3f6")};
@@ -12,10 +11,12 @@ const Global = styled.div`
   padding: 0 2rem;
 `;
 const Container = styled.div`
-  min-height: calc(100vh - 199px);
+  min-height: 100vh;
   width: 100%;
   max-width: 675px;
   padding-top: 10px;
+  display: flex;
+  flex-direction: column;
 `;
 
 const Button = styled.button`
@@ -38,4 +39,5 @@ const Button = styled.button`
       inset -7px -7px 20px white, 0px 0px 4px rgba(255, 255, 255, 0.2);
   }
 `;
+
 export { Container, Global, Button };

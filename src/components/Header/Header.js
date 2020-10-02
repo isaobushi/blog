@@ -5,7 +5,7 @@ import { SVGLogo } from "../Logo";
 // import { DarkModeSVG } from "../SVG/DarkModeSVG";
 import { DarkContext } from "../../context/DarkContext";
 
-export default ({ path }) => {
+export const Header = ({ path }) => {
   let { dark } = useContext(DarkContext);
   return (
     <Container>

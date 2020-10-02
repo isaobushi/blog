@@ -1,13 +1,10 @@
 import React, { useContext } from "react";
-import { Container, Global } from "./LayoutStyled";
-import { Header } from "../Header/Header";
-import { Nav } from "../Nav/Nav";
-import { Footer } from "../Footer/Footer";
+import { Global } from "./PostLayoutStyled";
 import SEO from "../SEO/SEO";
 import { DarkContext } from "../../context/DarkContext";
 import { ThemeProvider } from "styled-components";
 
-const Layout = ({ children, path }) => {
+const PostLayout = ({ path, children, ...props }) => {
   const { dark } = useContext(DarkContext);
   const mode = dark ? { mode: "dark" } : { mode: "light" };
   return (
@@ -15,16 +12,14 @@ const Layout = ({ children, path }) => {
       <SEO />
       <ThemeProvider theme={mode}>
         <Global dark={false}>
-          <Container>
-            <Header path={path}></Header>
-            <Nav variant="primary" dark={false} />
-            {children}
-            <Footer />
-          </Container>
+          {/* <Header path={path}></Header>
+          <Nav variant="primary" dark={false} /> */}
+          {children}
+          {/* <Footer /> */}
         </Global>
       </ThemeProvider>
     </>
   );
 };
 
-export default Layout;
+export default PostLayout;

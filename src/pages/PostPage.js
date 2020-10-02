@@ -1,13 +1,26 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Post from "../components/Post/Post";
-import Layout from "../components/Layout/Layout";
+import { Post } from "../components/Post/Post";
+import { PostContentTable } from "../components/Post/PostContentTable/PostContentTable";
+import PostLayout from "../components/Layout/PostLayout";
+import { Header } from "../components/Header/Header";
+import { Nav } from "../components/Nav/Nav";
+import { Footer } from "../components/Footer/Footer";
+import { PostContainerMain } from "../components/Layout/PostLayoutStyled";
 
 const PostPage = ({ data }) => {
   return (
-    <Layout>
-      <Post data={data} />
-    </Layout>
+    <PostLayout>
+      <PostContainerMain>
+        <div style={{ maxWidth: 675 }}>
+          <Header />
+          <Nav />
+          <Post data={data} />
+          <Footer />
+        </div>
+      </PostContainerMain>
+      <PostContentTable />
+    </PostLayout>
   );
 };
 
