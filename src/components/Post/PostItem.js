@@ -11,7 +11,7 @@ import { Link } from "gatsby";
 import { ButtonSquarred } from "../General/Button/Button";
 import gsap from "gsap/gsap-core";
 
-const PostItem = ({ title, date, tag, slug, dark, post, ...props }) => {
+const PostItem = ({ title, date, tag, slug, dark, post }) => {
   const [aniamtionArrows, setAnimationArrows] = useState();
   let arrow1 = useRef(null);
   let arrow2 = useRef(null);

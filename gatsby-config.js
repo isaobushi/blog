@@ -57,6 +57,15 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-mdx`,
+
+      options: {
+        extensions: [`.mdx`, `.md`],
+
+        gatsbyRemarkPlugins: [`gatsby-remark-autolink-headers`],
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,

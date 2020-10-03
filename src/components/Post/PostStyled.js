@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { H1, H2, Subtext } from "../General/Typography/Typography";
-
+import { textColor } from "../../utils/Theme";
 const PostContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -17,7 +17,7 @@ const PostTitle = styled(H1)`
   border-radius: 5px;
   padding-left: 0.25rem;
   width: 100%;
-  background-color: #ffa500d9;
+  background-color: ${textColor};
   margin-bottom: 2rem;
   color: white;
 `;
@@ -28,7 +28,6 @@ const PostSubTitle = styled(H2)`
 
 const DateText = styled(Subtext)`
   display: inline;
-  width: fit-content;
 `;
 
 const TimeToRead = styled(Subtext)`

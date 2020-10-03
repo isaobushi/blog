@@ -19,7 +19,7 @@ const PostPage = ({ data }) => {
           <Footer />
         </div>
       </PostContainerMain>
-      <PostContentTable />
+      <PostContentTable data={data} />
     </PostLayout>
   );
 };

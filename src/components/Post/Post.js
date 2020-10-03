@@ -19,13 +19,15 @@ const Post = ({ data }) => {
 
   return (
     <PostContainer>
-      <PostTitle>{title}</PostTitle>
+      <PostTitle id="top" variant="secondary">
+        {title}
+      </PostTitle>
       <PostSubTitle>{sub}</PostSubTitle>
       <div>
-        <DateText>{date}</DateText>
+        <DateText variant="secondary">{date}</DateText>
         {" - "}
         <TimeToRead variant="accent">{timeToRead}</TimeToRead>
-        <TimeToRead>{" min. read"}</TimeToRead>
+        <TimeToRead variant="secondary">{" min. read"}</TimeToRead>
       </div>
       <PostArticle>
         <MDXRenderer>{data.mdx.body}</MDXRenderer>

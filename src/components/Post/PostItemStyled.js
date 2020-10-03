@@ -20,6 +20,8 @@ const Title = styled(H2)`
 
 const Tag = styled(Subtext)`
   width: fit-content;
+  color: ${color.subTitle};
+
   &:hover {
     cursor: pointer;
     color: ${color.accent};
@@ -51,6 +53,7 @@ const ReadMore = styled.div`
 const ReadTime = styled.div`
   font-family: "Roboto", sans-serif;
   font-size: 0.8rem;
+  color: ${color.subTitle};
   span:first-child {
     color: ${color.accent};
   }

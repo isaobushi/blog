@@ -5,7 +5,7 @@ import * as shadow from "./shadows";
 const textColor = theme.variants("mode", "variant", {
   default: { light: colors.textLight, dark: colors.textDark },
   accent: { light: colors.accent, dark: "colors.accent" },
-  secondary: { light: colors.textLight, dark: colors.neutral200 },
+  secondary: { light: colors.subTitle, dark: colors.subTitle },
   danger: { light: colors.danger, dark: colors.danger },
   warning: { light: colors.warning, dark: colors.warning },
   success: { light: colors.success, dark: colors.success },
