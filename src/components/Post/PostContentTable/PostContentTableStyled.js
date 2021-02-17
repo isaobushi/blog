@@ -14,7 +14,7 @@ export const Container = styled.div`
 `;
 
 export const ScreenContainer = styled.aside`
-  max-width: 250px;
+  min-width: 250px;
   text-align: center;
   padding: 1rem 0;
   border: 1px solid #7f93a01a;
@@ -35,8 +35,7 @@ export const ScreenContainer = styled.aside`
 
 export const Title = styled(P)`
   font-family: "Roboto Mono", sans-serif;
-  padding: 0;
-  padding: 0 2rem;
+  padding: 2rem;
   text-align: center;
   color: ${({ isActive }) => (isActive ? "#5e6572" : "#ffa500d9")};
   cursor: pointer;

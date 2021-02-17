@@ -6,7 +6,6 @@ import {
   UL,
   A,
 } from "./PostContentTableStyled";
-import { ScreenSVG } from "../../SVG/Screen";
 import scrollTo from "gatsby-plugin-smoothscroll";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -16,8 +15,8 @@ export const PostContentTable = ({ data }) => {
   const {
     mdx: { tableOfContents },
   } = data;
+
   let container = useRef(null);
-  let indicator = useRef(null);
 
   const headings = tableOfContents.items.map(h => ({ ...h, id: h.url }));
 
@@ -41,18 +40,15 @@ export const PostContentTable = ({ data }) => {
       duration: 0.3,
       minHeight: "30vh",
       opacity: 1,
-    }).to(indicator, { duration: 1, drawSVG: "100%" });
-  }, [indicator]);
+    });
+  }, []);
 
   return (
     <Container>
       <ScreenContainer ref={e => (container = e)}>
         <Title onClick={() => scrollTo("#top")} isActive={activeHeadingId}>
-          Content Table
+          Content Table &#11014;
         </Title>
-        <div ref={e => (indicator = e)}>
-          <ScreenSVG style={{ width: "100%" }} />
-        </div>
         <UL>
           {headings.map(h => (
             <li key={h.url}>
