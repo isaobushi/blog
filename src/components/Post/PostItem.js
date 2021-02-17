@@ -47,8 +47,9 @@ const PostItem = ({ title, date, tag, slug, dark, post }) => {
       <Main>
         <Title
           as={Link}
-          to={`${slug}`}
+          to={`/${slug}`}
           dark={dark}
+          replace
           onMouseEnter={() => setAnimationArrows(aniamtionArrows.play())}
           onMouseLeave={() => setAnimationArrows(aniamtionArrows.reverse(0))}
         >

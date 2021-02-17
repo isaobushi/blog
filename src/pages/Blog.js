@@ -7,6 +7,7 @@ import {
   Title,
   Item,
 } from "../components/Blog/BlogStyled";
+import PostItem from "../components/Post/PostItem";
 import { DarkContext } from "../context/DarkContext";
 
 const Blog = ({ location, data }) => {
@@ -21,7 +22,19 @@ const Blog = ({ location, data }) => {
         </Title>
         <ListTags>List Tags</ListTags>
       </BlogHeader>
-      <Item></Item>
+      {data.allMdx.nodes.map(node => (
+        <PostItem
+          duration
+          post={node.body}
+          key={node.frontmatter.title + node.frontmatter.date}
+          label="Post"
+          title={node.frontmatter.title}
+          date={node.frontmatter.date}
+          tag={"React"}
+          slug={node.slug}
+          dark={dark}
+        />
+      ))}
     </Layout>
   );
 };
@@ -38,6 +51,8 @@ export const query = graphql`
           sub
           date
         }
+        body
+        slug
         timeToRead
         tableOfContents
       }
