@@ -17,6 +17,8 @@ const PostItem = ({ title, date, tag, slug, dark, post }) => {
   let arrow2 = useRef(null);
   let arrow3 = useRef(null);
 
+  let [month, day, year] = date.split(" ");
+
   useEffect(() => {
     const tl = gsap.timeline({ pause: true });
     setAnimationArrows(
@@ -41,8 +43,8 @@ const PostItem = ({ title, date, tag, slug, dark, post }) => {
   return (
     <CardItem>
       <ButtonSquarred variant="default" dark={dark}>
-        <span>24</span>
-        <span>NOV</span>
+        <span>{day}</span>
+        <span>{month.toUpperCase()}</span>
       </ButtonSquarred>
       <Main>
         <Title

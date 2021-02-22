@@ -4,14 +4,13 @@ const Global = styled.div`
   display: flex;
   height: 100%;
   justify-content: center;
-  align-items: center;
   background-color: ${({ dark }) => (dark ? "#2A2D32" : "#f1f3f6")};
   color: ${({ dark }) => (dark ? "#f1f3f6" : "#5e6572")};
   transition: all 0.2s ease-in-out;
   padding: 0 2rem;
 `;
 const Container = styled.div`
-  min-height: 100vh;
+  height: 100%;
   width: 100%;
   max-width: 675px;
   padding-top: 10px;

@@ -8,7 +8,10 @@ const About = ({ data }) => {
   return (
     <Layout>
       <Container>
-        <Image fluid={data.manImage.childImageSharp.fluid} />
+        <Image
+          fluid={data.manImage.childImageSharp.fluid}
+          style={{ borderRadius: 10 }}
+        />
       </Container>
     </Layout>
   );
@@ -18,7 +21,7 @@ export default About;
 
 export const query = graphql`
   {
-    manImage: file(relativePath: { eq: "stock-man-hat.jpg" }) {
+    manImage: file(relativePath: { eq: "landscapeOceanRoad.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG

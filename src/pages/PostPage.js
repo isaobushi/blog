@@ -10,17 +10,19 @@ import { PostContainerMain } from "../components/Layout/PostLayoutStyled";
 
 const PostPage = ({ data }) => {
   return (
-    <PostLayout>
-      <PostContainerMain>
-        <div style={{ maxWidth: 675 }}>
+    <>
+      <PostLayout>
+        <PostContainerMain>
           <Header />
           <Nav />
-          <Post data={data} />
+          <div style={{ flex: "1 0 auto" }}>
+            <Post data={data} />
+          </div>
           <Footer />
-        </div>
-      </PostContainerMain>
-      <PostContentTable data={data} />
-    </PostLayout>
+        </PostContainerMain>
+        {data.mdx.tableOfContents.items && <PostContentTable data={data} />}
+      </PostLayout>
+    </>
   );
 };
 

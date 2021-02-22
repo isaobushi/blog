@@ -93,12 +93,16 @@ html {
 
 html,
 body {
-  height: 100%;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
   overscroll-behavior: contain;
   font-size: 16px;
+  height: 100%;
+}
+
+#___gatsby, #gatsby-focus-wrapper {
+  height: 100%;
 }
 
 h1,

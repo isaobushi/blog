@@ -6,6 +6,7 @@ const FooterContainer = styled.div`
   margin-top: 8rem;
   opacity: 0.7;
   height: 61px;
+  flex-shrink: 0;
 `;
 
 const TextFooter = styled.p`

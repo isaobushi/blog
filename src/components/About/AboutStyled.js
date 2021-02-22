@@ -1,12 +1,10 @@
-import styled from 'styled-components'
-
+import styled from "styled-components";
 
 const Container = styled.div`
   width: 100%;
-  min-height: 100vh;
   display: flex;
-  background-color: #f1f3f6;
   flex-direction: column;
+  padding: 5vh 0;
 `;
 
 const Text404 = styled.h1`
@@ -29,7 +27,7 @@ const Card = styled.div`
   margin-top: 2vh;
   background-color: #f1f3f6;
   transition: all 1s ease-in;
-  `;
+`;
 
 const Text = styled.p`
   color: #5e6572;
@@ -37,7 +35,7 @@ const Text = styled.p`
   line-height: 3rem;
   padding: 0;
   text-shadow: 12px 12px 20px #d1d9e6, -12px -12px 20px #fff;
-  `;
+`;
 const LinkGoBack = styled.div`
   text-align: center;
   padding: 2vh;
@@ -49,12 +47,12 @@ const LinkGoBack = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   &:hover a {
-    transition: all .3s ease-in;
+    transition: all 0.3s ease-in;
     padding-bottom: 1rem;
     border-bottom: 1px solid orange;
-    transform: scale(1.01)
+    transform: scale(1.01);
   }
 `;
-export { Card, Container,LinkGoBack, Text, Text404 };
+export { Card, Container, LinkGoBack, Text, Text404 };

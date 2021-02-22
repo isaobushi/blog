@@ -22,7 +22,7 @@ const Button = styled.button`
   &:hover {
     box-shadow: none;
     border: 1px solid ${theme.buttonColorHover};
-    color: ${theme.buttonColorHover};
+    /* color: ${theme.buttonColorHover}; */
   }
   @media (max-width: 768px) {
     width: 40%;
@@ -33,8 +33,8 @@ const Button = styled.button`
 
 const ButtonSquarred = styled(Button)`
   cursor: pointer;
-  height: 3rem;
-  width: 3rem;
+  height: 3.3rem;
+  width: 3.3rem;
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -55,11 +55,7 @@ const ButtonSquarred = styled(Button)`
       font-size: 14px;
     }
   }
-  &:hover > span:last-child {
-    font-weight: 100;
-    opacity: 1;
-    color: ${({ dark }) => (dark ? color.neutral200 : color.neutral500)};
-  }
+
   @media (max-width: 768px) {
     width: 3rem;
     span {

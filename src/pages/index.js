@@ -23,7 +23,7 @@ export default ({ location, data }) => {
           label="Post"
           title={node.frontmatter.title}
           date={node.frontmatter.date}
-          tag={"React"}
+          tag={node.frontmatter.topic}
           slug={node.slug}
           dark={dark}
         />

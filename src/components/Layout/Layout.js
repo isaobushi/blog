@@ -18,7 +18,7 @@ const Layout = ({ children, path }) => {
           <Container>
             <Header path={path}></Header>
             <Nav variant="primary" dark={false} />
-            {children}
+            <div style={{ flex: "1 0 auto" }}>{children}</div>
             <Footer />
           </Container>
         </Global>
