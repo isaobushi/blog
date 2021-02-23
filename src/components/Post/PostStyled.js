@@ -43,6 +43,9 @@ const PostArticle = styled.article`
   /* max-width: 675px; */
   align-self: center;
   padding-top: 3rem;
+  & > img {
+    width: 100%;
+  }
 `;
 
 export {
