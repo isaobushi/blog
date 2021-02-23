@@ -12,6 +12,7 @@ const FooterContainer = styled.div`
 const TextFooter = styled.p`
   font-size: 1rem;
   font-family: "Montserrat", sans-serif;
+  color: black;
 `;
 
 export { FooterContainer, TextFooter };

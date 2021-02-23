@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { H1, H2, Subtext } from "../General/Typography/Typography";
 import { textColor } from "../../utils/Theme";
+
 const PostContainer = styled.div`
   display: flex;
   justify-content: center;

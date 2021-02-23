@@ -34,15 +34,6 @@ const Title = styled(H2)`
   padding-top: 4px;
 `;
 
-const Tag = styled(Subtext)`
-  width: fit-content;
-  color: ${color.subTitle};
-  &:hover {
-    cursor: pointer;
-    color: ${color.accent};
-  }
-`;
-
 const Main = styled.div`
   display: flex;
   flex-direction: column;
@@ -63,6 +54,17 @@ const Main = styled.div`
     width: 100%;
   }
 `;
+const Tag = styled(Subtext)`
+  width: fit-content;
+  color: #5f6a71;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8rem;
+
+  &:hover {
+    cursor: pointer;
+    color: ${color.accent};
+  }
+`;
 
 const ReadMore = styled.div`
   padding: 2px;
@@ -71,11 +73,13 @@ const ReadMore = styled.div`
     opacity: 0;
   }
 `;
+
 const ReadTime = styled.div`
+  font-weight: 200;
   font-family: "Roboto", sans-serif;
   font-size: 0.8rem;
   min-width: 100px;
-  color: ${color.subTitle};
+  color: #5f6a71;
   span:first-child {
     color: ${color.accent};
   }

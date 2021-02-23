@@ -15,6 +15,8 @@ const Avatar = styled.img`
   &:hover {
     svg {
       background-color: #ff8300;
+      width: 100%;
+      height: 100%;
     }
   }
 `;

@@ -11,6 +11,7 @@ export const Header = ({ path }) => {
     <Container>
       <Link to="/">
         <SVGLogo path={path} dark={dark} />
+        <p style={{ color: "transparent" }}>a</p>
       </Link>
       {/* <DarkModeSVG dark={dark} cb={setDark} /> */}
     </Container>

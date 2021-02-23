@@ -46,9 +46,9 @@ const ButtonSquarred = styled(Button)`
     line-height: 1.5rem;
     color: ${({ dark }) => (dark ? color.neutral200 : color.neutral500)};
     &:last-child {
-      opacity: 0.5;
       text-transform: capitalize;
       font-weight: 500;
+      color: #5f6a71;
     }
     @media (max-width: 768px) {
       height: 90%;
